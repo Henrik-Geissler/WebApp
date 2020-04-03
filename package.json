@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/Henrik-Geissler/WebApp.git"
   },
-  "homepage": "http://henrik-geissler.github.io/WebApp",
+  "homepage": "https://henrik-geissler.github.io/WebApp",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
