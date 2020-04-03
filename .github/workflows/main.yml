@@ -61,8 +61,8 @@ jobs:
       - name: Build App
         run: yarn build
 
-      - name: Serve App
-        run: yarn start
+      - name: Host App locally
+        run: yarn start & exit
 
       - name: Run Puppeteer E2E Tests
         uses: ianwalter/puppeteer@master
