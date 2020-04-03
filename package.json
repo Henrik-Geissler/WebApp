@@ -2,7 +2,18 @@
   "name": "WebApp",
   "version": "0.0.1",
   "private": true,
+  "author": {
+    "name": "Henrik Geissler"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Henrik-Geissler/WebApp.git"
+  },
+  "homepage": "http://henrik-geissler.github.io/WebApp",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint-plugin-react": "^7.19.0",
     "@capacitor/core": "1.5.2",
     "@ionic/react": "^5.0.7",
     "@ionic/react-router": "^5.0.7",
@@ -24,9 +35,15 @@
     "typescript": "3.7.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3000 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "test": "yarn test:e2e",
+    "test:e2e": "PORT=3000 NODE_ENV=debug cucumber-js features",
+    "test:e2e-headless": "PORT=3000 cucumber-js features",
+    "test:unit": "react-scripts test --watchAll --coverage",
+    "test:unitCI": "react-scripts test --watchAll=false --forceExit --detectOpenHandles --ci",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,7 +62,20 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "1.5.2"
+    "@capacitor/cli": "1.5.2",
+    "axe-puppeteer": "^1.0.0",
+    "axe-reports": "^1.1.11",
+    "cucumber": "5.0.2",
+    "expect": "24.5.0",
+    "gh-pages": "^2.2.0",
+    "pixelmatch": "^5.0.0",
+    "prettier": "^1.19.1",
+    "puppeteer": "1.9.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/{!(index,serviceWorker),}.js"
+    ]
   },
   "description": "An Ionic project"
 }
