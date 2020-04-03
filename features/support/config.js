@@ -58,7 +58,7 @@ const config = {
 }
 
 // Create required folders
-BeforeAll(async function () {
+BeforeAll(async function() {
   await createFolder(`${config.reportPath}`)
   await createFolder(`${config.screenshotPath}/compare`)
   await createFolder(`${config.screenshotPath}/diff`)
@@ -67,7 +67,7 @@ BeforeAll(async function () {
 })
 
 // Use the same BrowserScope object for each scenario in a feature
-Before(async function (scenario) {
+Before(async function(scenario) {
   // Check if the current scenario is in the same feature test
   const currentFeature = scenario.sourceLocation.uri
   if (featureScope.isNewFeature(currentFeature))
@@ -79,7 +79,7 @@ Before(async function (scenario) {
 })
 
 // After hook for each scenario
-After(async function (scenario) {
+After(async function(scenario) {
   featureScope.browserScope = this
 
   // Take a screenshot if a scenario fails
@@ -92,6 +92,6 @@ After(async function (scenario) {
 })
 
 // After all feature tests are complete
-AfterAll(async function () {
+AfterAll(async function() {
   //await featureScope.browserScope.close()
 })
