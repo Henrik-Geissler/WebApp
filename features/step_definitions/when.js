@@ -1,42 +1,42 @@
-import {When} from 'cucumber'
-import clickElement from '../support/action/clickElement'
-import deleteCookie from '../support/action/deleteCookie'
-import fileUpload from '../support/action/fileUpload'
-import keyboardPress from '../support/action/keyboardPress'
-import openUrl from '../support/action/openUrl'
-import resizeScreenSize from '../support/action/resizeScreenSize'
-import setElementStyle from '../support/action/setElementStyle'
-import setElementValue from '../support/action/setElementValue'
-import setUserAgent from '../support/action/setUserAgent'
-import scrollToElement from '../support/action/scrollToElement'
-import waitFor from '../support/action/waitFor'
-import waitForSelector from '../support/action/waitForSelector'
+const {When} = require('cucumber')
+const clickElement = require('../support/action/clickElement')
+const deleteCookie = require('../support/action/deleteCookie')
+const fileUpload = require('../support/action/fileUpload')
+const keyboardPress = require('../support/action/keyboardPress')
+const openUrl = require('../support/action/openUrl')
+const resizeScreenSize = require('../support/action/resizeScreenSize')
+const setElementStyle = require('../support/action/setElementStyle')
+const setElementValue = require('../support/action/setElementValue')
+const setUserAgent = require('../support/action/setUserAgent')
+const scrollToElement = require('../support/action/scrollToElement')
+const waitFor = require('../support/action/waitFor')
+const waitForSelector = require('../support/action/waitForSelector')
 
-When('I open the url {string-env}', async function (url) {
+When('I open the url {string-env}', async function(url) {
   await openUrl.call(this, url)
 })
 
-When('I open the url {string-env} with user agent {string}', async function (
+When('I open the url {string-env} with user agent {string}', async function(
   url,
   userAgent,
 ) {
   await openUrl.call(this, url, userAgent)
 })
 
-When('I open the url {string-env} with device {string}', async function (
+When('I open the url {string-env} with device {string}', async function(
   url,
   device,
 ) {
   await openUrl.call(this, url, null, device)
 })
 
-When('I click the element/button/link {string}', async function (selector) {
+When('I click the element/button/link {string}', async function(selector) {
   await clickElement.call(this, selector, null)
 })
 
 When(
   'I click the element/button/link {string} and wait for the element {string}',
-  async function (selector, waitForSelector) {
+  async function(selector, waitForSelector) {
     await clickElement.call(this, selector, waitForSelector)
   },
 )
@@ -48,11 +48,11 @@ When(
 
 When('I wait for {float} second(s)', waitFor)
 
-When('I wait for element {string}', async function (selector) {
+When('I wait for element {string}', async function(selector) {
   await waitForSelector.call(this, selector, null)
 })
 
-When('I wait for element {string} for {float} seconds', async function (
+When('I wait for element {string} for {float} seconds', async function(
   selector,
   seconds,
 ) {
@@ -70,11 +70,11 @@ When('I scroll to the element {string}', scrollToElement)
 
 When('I set the user agent to {string}', setUserAgent)
 
-When('I press the {string} key', async function (key) {
+When('I press the {string} key', async function(key) {
   await keyboardPress.call(this, key, null)
 })
 
-When('I press the {string} key on the {string} element', async function (
+When('I press the {string} key on the {string} element', async function(
   key,
   selector,
 ) {

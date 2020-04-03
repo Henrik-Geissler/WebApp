@@ -1,27 +1,27 @@
-import {Then} from 'cucumber'
-import checkAccessibility from '../support/check/checkAccessibility'
-import checkAttribute from '../support/check/checkAttribute'
-import checkAttributeContains from '../support/check/checkAttributeContains'
-import checkContainsText from '../support/check/checkContainsText'
-import checkElementEnabled from '../support/check/checkElementEnabled'
-import checkElementExists from '../support/check/checkElementExists'
-import checkElementVisible from '../support/check/checkElementVisible'
-import checkElementValue from '../support/check/checkElementValue'
-import checkIsEmpty from '../support/check/checkIsEmpty'
-import checkTitle from '../support/check/checkTitle'
-import checkUrl from '../support/check/checkUrl'
-import checkHasFocus from '../support/check/checkHasFocus'
-import checkIsChecked from '../support/check/checkIsChecked'
-import checkCookieExists from '../support/check/checkCookieExists'
-import checkCookieValue from '../support/check/checkCookieValue'
-import resizeScreenSize from '../support/action/resizeScreenSize'
-import checkTitleContains from '../support/check/checkTitleContains'
-import checkUrlContains from '../support/check/checkUrlContains'
-import checkScreenshot from '../support/check/checkScreenshot'
+const {Then} = require('cucumber')
+const checkAccessibility = require('../support/check/checkAccessibility')
+const checkAttribute = require('../support/check/checkAttribute')
+const checkAttributeContains = require('../support/check/checkAttributeContains')
+const checkContainsText = require('../support/check/checkContainsText')
+const checkElementEnabled = require('../support/check/checkElementEnabled')
+const checkElementExists = require('../support/check/checkElementExists')
+const checkElementVisible = require('../support/check/checkElementVisible')
+const checkElementValue = require('../support/check/checkElementValue')
+const checkIsEmpty = require('../support/check/checkIsEmpty')
+const checkTitle = require('../support/check/checkTitle')
+const checkUrl = require('../support/check/checkUrl')
+const checkHasFocus = require('../support/check/checkHasFocus')
+const checkIsChecked = require('../support/check/checkIsChecked')
+const checkCookieExists = require('../support/check/checkCookieExists')
+const checkCookieValue = require('../support/check/checkCookieValue')
+const resizeScreenSize = require('../support/action/resizeScreenSize')
+const checkTitleContains = require('../support/check/checkTitleContains')
+const checkUrlContains = require('../support/check/checkUrlContains')
+const checkScreenshot = require('../support/check/checkScreenshot')
 
 Then(/^I expect that the title is "([^"]*)"$/, checkTitle)
 
-Then(/^I expect the element "([^"]*)" is( not)? visible$/, async function (
+Then(/^I expect the element "([^"]*)" is( not)? visible$/, async function(
   selector,
   not,
 ) {
@@ -30,7 +30,7 @@ Then(/^I expect the element "([^"]*)" is( not)? visible$/, async function (
 
 Then(
   /^I expect the element "([^"]*)" is( not)? visible after "([^"]*)" seconds$/,
-  async function (selector, not, seconds) {
+  async function(selector, not, seconds) {
     await checkElementVisible.call(this, selector, not, seconds)
   },
 )
@@ -94,7 +94,7 @@ Then(
 
 Then(
   /^I expect the screenshot of "([^"]*)?" matches the web page?$/,
-  async function (filename) {
+  async function(filename) {
     await checkScreenshot.call(this, filename)
   },
 )

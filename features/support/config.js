@@ -2,7 +2,7 @@
  * Configure the test suite
  * https://github.com/cucumber/cucumber-js/blob/master/docs/support_files/api_reference.md
  */
-import {
+const {
   After,
   AfterAll,
   Before,
@@ -11,10 +11,10 @@ import {
   defineParameterType,
   setDefaultTimeout,
   setWorldConstructor,
-} from 'cucumber'
-import FeatureScope from './scope/FeatureScope'
-import BrowserScope from './scope/BrowserScope'
-import {createFolder} from './util/FileSystem'
+} = require('cucumber')
+const FeatureScope = require('./scope/FeatureScope')
+const BrowserScope = require('./scope/BrowserScope')
+const {createFolder} = require('./util/FileSystem')
 
 // Process .env file
 require('dotenv').config()
@@ -93,5 +93,5 @@ After(async function (scenario) {
 
 // After all feature tests are complete
 AfterAll(async function () {
-  await featureScope.browserScope.close()
+  //await featureScope.browserScope.close()
 })

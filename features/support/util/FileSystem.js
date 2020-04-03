@@ -1,5 +1,5 @@
-import {promisify} from 'util'
-import fs from 'fs'
+const {promisify} = require('util')
+const fs = require('fs')
 
 // Create promise based versions of the callback functions
 const mkdir = promisify(fs.mkdir)

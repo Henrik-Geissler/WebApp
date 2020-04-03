@@ -26,6 +26,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     '@typescript-eslint/member-delimiter-style': 'off',
+    '@typescript-eslint/no-var-requires': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'warn',
     'no-invalid-this': 'warn',
     'no-magic-numbers': 'warn',

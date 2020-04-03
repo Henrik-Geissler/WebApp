@@ -1,4 +1,4 @@
-import {Status, SummaryFormatter} from 'cucumber'
+const {Status, SummaryFormatter} = require('cucumber')
 const STATUS_CHARACTER_MAPPING = {
   [Status.AMBIGUOUS]: '~',
   [Status.FAILED]: '×',
