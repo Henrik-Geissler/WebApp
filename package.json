@@ -39,7 +39,7 @@
     "build": "react-scripts build",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "test": "yarn test:e2e",
+    "test": "yarn test:e2e-headless",
     "test:e2e": "PORT=3000 NODE_ENV=debug cucumber-js features",
     "test:e2e-headless": "PORT=3000 cucumber-js features",
     "test:unit": "react-scripts test --watchAll --coverage",
