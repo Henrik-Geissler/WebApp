@@ -56,7 +56,7 @@ jobs:
         run: ./node_modules/.bin/prettier --write "**/*.*"   
 
       - name: Run ESLinting
-          run: ./node_modules/.bin/eslint --fix "**/*.*"
+        run: ./node_modules/.bin/eslint --fix "**/*.*"
 
       - name: Run UNIT Tests
         run: yarn test:unitCI
