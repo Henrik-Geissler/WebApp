@@ -74,7 +74,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/{!(index,serviceWorker),}.js"
+      "src/**/{!(index),}.tsx"
     ]
   },
   "description": "An Ionic project"
