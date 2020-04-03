@@ -53,7 +53,8 @@ jobs:
         run: yarn install
 
       - name: Run Prettier
-        run: ./node_modules/.bin/prettier ./src/**/*.tsx --write
+        run: ./node_modules/.bin/prettier ./src/**/*.* --write
+        run: ./node_modules/.bin/prettier ./feature/**/*.* --write
 
       - name: Run ESLinting
         run: ./node_modules/.bin/eslint ./src/**/*.tsx --fix
