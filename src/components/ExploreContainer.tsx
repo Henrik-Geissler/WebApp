@@ -12,6 +12,7 @@ function ExploreContainer({name}: ContainerProps): JSX.Element {
       <p>
         Explore{' '}
         <a
+          id="ui_components"
           target="_blank"
           rel="noopener noreferrer"
           href="https://ionicframework.com/docs/components"
