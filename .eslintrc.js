@@ -9,7 +9,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:jest/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -24,5 +24,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint'],
-  rules: {},
+  rules: {
+    'no-extra-parens': 'error',
+    'no-console': 'error',
+    'sort-imports': 'error',
+  },
 }

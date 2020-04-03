@@ -24,6 +24,8 @@ import '@ionic/react/css/display.css'
 /* Theme variables */
 import './theme/variables.css'
 
+console.log('hi')
+
 const App: React.FC = () => {
   const [selectedPage, setSelectedPage] = useState('')
 

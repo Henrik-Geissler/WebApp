@@ -46,9 +46,6 @@
     "test:unitCI": "react-scripts test --watchAll=false --forceExit --detectOpenHandles --ci",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
