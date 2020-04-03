@@ -25,8 +25,6 @@ class BrowserScope {
       ...defaultOptions,
       ...puppeteerOptions,
       ...this.worldParameters,
-      executablePath: '/usr/bin/chromium-browser',
-      args: ['--disable-dev-shm-usage --no-sandbox'],
     })
     this.page = await this.browser.newPage()
   }
