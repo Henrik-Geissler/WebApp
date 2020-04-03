@@ -33,7 +33,7 @@ class FeatureScope {
       this.browserScope = null
     }
 
-    this.browserScope = new BrowserScope({ parameters: worldParameters })
+    this.browserScope = new BrowserScope({parameters: worldParameters})
     await this.browserScope.init()
   }
 
