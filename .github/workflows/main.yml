@@ -54,12 +54,11 @@ jobs:
 
       - name: Run Prettier
         run: |
-          ./node_modules/.bin/prettier */* --write
+          ./node_modules/.bin/prettier **/* --write
 
       - name: Run ESLinting
         run: |
-          ./node_modules/.bin/eslint ./src/*.tsx --fix
-          ./node_modules/.bin/eslint ./src/**/*.tsx --fix
+          ./node_modules/.bin/eslint **/* --fix
 
       - name: Run UNIT Tests
         run: yarn test:unitCI
