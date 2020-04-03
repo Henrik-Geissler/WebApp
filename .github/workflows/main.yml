@@ -54,8 +54,7 @@ jobs:
 
       - name: Run Prettier
         run: |
-          ./node_modules/.bin/prettier ./src/* --write
-          ./node_modules/.bin/prettier ./features/* --write
+          ./node_modules/.bin/prettier . --write
 
       - name: Run ESLinting
         run: |
