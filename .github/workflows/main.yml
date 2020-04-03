@@ -52,6 +52,9 @@ jobs:
       - name: Install Packages
         run: yarn install
 
+      - name: Run ESLinting
+        run: eslint ./src/**/*.tsx --fix
+
       - name: Run UNIT Tests
         run: yarn test:unitCI
 
