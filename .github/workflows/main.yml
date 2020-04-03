@@ -62,7 +62,7 @@ jobs:
         run: yarn build
 
       - name: Host App locally
-        run: yarn start & exit
+        run: yarn start & (sleep 30 && exit)
 
       - name: Run Puppeteer E2E Tests
         uses: ianwalter/puppeteer@master
