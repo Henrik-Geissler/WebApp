@@ -54,11 +54,11 @@ jobs:
 
       - name: Run Prettier
         run: |
-             ./node_modules/.bin/prettier ./src/*/*.* --write
-             ./node_modules/.bin/prettier ./features/*/*.* --write
+             ./node_modules/.bin/prettier ./src/*.* --write
+             ./node_modules/.bin/prettier ./features/*.* --write
 
       - name: Run ESLinting
-        run: ./node_modules/.bin/eslint ./src/*/*.tsx --fix
+        run: ./node_modules/.bin/eslint ./src/*.tsx --fix
 
       - name: Run UNIT Tests
         run: yarn test:unitCI
@@ -71,6 +71,14 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
+      - name: Git Status
+        run: git Status
+
+      - name: Commit and Push Changes
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Updating Domain
         run: echo "Update domain"
