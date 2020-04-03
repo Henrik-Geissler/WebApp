@@ -1,4 +1,4 @@
-const { Status, SummaryFormatter } = require('cucumber')
+const {Status, SummaryFormatter} = require('cucumber')
 const STATUS_CHARACTER_MAPPING = {
   [Status.AMBIGUOUS]: '~',
   [Status.FAILED]: '×',
@@ -22,8 +22,8 @@ class PrettyFormatter extends SummaryFormatter {
     this.scenarioCount = 1
   }
 
-  logTestCaseName({ sourceLocation }) {
-    const { pickle } = this.eventDataCollector.getTestCaseData(sourceLocation)
+  logTestCaseName({sourceLocation}) {
+    const {pickle} = this.eventDataCollector.getTestCaseData(sourceLocation)
     this.log(
       `${this.scenarioCount++}) Scenario: ${pickle.name} ${this.colorFns[
         'location'
@@ -31,13 +31,13 @@ class PrettyFormatter extends SummaryFormatter {
     )
   }
 
-  logTestStep({ testCase, index, result }) {
+  logTestStep({testCase, index, result}) {
     const {
       gherkinKeyword,
       pickleStep,
       testStep,
-    } = this.eventDataCollector.getTestStepData({ testCase, index })
-    const { status } = result
+    } = this.eventDataCollector.getTestStepData({testCase, index})
+    const {status} = result
 
     // Log the step
     if (pickleStep) {

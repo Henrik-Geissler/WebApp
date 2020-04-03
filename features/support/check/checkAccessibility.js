@@ -1,5 +1,5 @@
 const assert = require('assert').strict
-const { AxePuppeteer } = require('axe-puppeteer')
+const {AxePuppeteer} = require('axe-puppeteer')
 const AxeReports = require('axe-reports')
 
 /**

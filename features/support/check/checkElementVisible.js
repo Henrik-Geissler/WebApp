@@ -9,7 +9,7 @@ const assert = require('assert')
 module.exports = async function(selector, not, seconds) {
   let error = null
   const visibilityProp = not ? 'hidden' : 'visible'
-  const options = { timeout: seconds ? Number(seconds) * 1000 : 1000 }
+  const options = {timeout: seconds ? Number(seconds) * 1000 : 1000}
   options[visibilityProp] = true
 
   try {

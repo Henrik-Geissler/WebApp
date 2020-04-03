@@ -1,4 +1,4 @@
-const { When } = require('cucumber')
+const {When} = require('cucumber')
 const clickElement = require('../support/action/clickElement')
 const deleteCookie = require('../support/action/deleteCookie')
 const fileUpload = require('../support/action/fileUpload')

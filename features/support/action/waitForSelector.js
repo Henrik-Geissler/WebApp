@@ -5,6 +5,6 @@
  */
 module.exports = async function(selector, seconds) {
   const timeout = seconds ? seconds : 30
-  const options = { timeout: timeout * 1000 }
+  const options = {timeout: timeout * 1000}
   await this.page.waitForSelector(selector, options)
 }

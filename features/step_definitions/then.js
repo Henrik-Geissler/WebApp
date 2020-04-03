@@ -1,4 +1,4 @@
-const { Then } = require('cucumber')
+const {Then} = require('cucumber')
 const checkAccessibility = require('../support/check/checkAccessibility')
 const checkAttribute = require('../support/check/checkAttribute')
 const checkAttributeContains = require('../support/check/checkAttributeContains')

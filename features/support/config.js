@@ -14,7 +14,7 @@ const {
 } = require('cucumber')
 const FeatureScope = require('./scope/FeatureScope')
 const BrowserScope = require('./scope/BrowserScope')
-const { createFolder } = require('./util/FileSystem')
+const {createFolder} = require('./util/FileSystem')
 
 // Process .env file
 require('dotenv').config()
