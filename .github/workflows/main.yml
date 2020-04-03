@@ -61,6 +61,16 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Install
+        uses: ianwalter/puppeteer@master
+        with:
+          args: yarn
+
+      - name: Test
+        uses: ianwalter/puppeteer@master
+        with:
+          args: yarn test
+
       - name: Commit and Push Changes
         uses: mikeal/publish-to-github-action@master
         env:
