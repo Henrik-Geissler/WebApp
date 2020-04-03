@@ -1,9 +1,9 @@
 const assert = require('assert').strict
-const fs = require('fs')
+import fs from 'fs'
 const PNG = require('pngjs').PNG
-const pixelmatch = require('pixelmatch')
-const {promisify} = require('util')
-const {pathExists} = require('../util/FileSystem')
+import pixelmatch from 'pixelmatch'
+import {promisify} from 'util'
+import {pathExists} from '../util/FileSystem'
 
 // Create promise based versions of the callback functions
 const copyFile = promisify(fs.copyFile)
@@ -28,7 +28,7 @@ function parseImage(filename) {
  * @param {String} screenName The name of the screenshot to take
  * @param {String} rootDir The root directory to save screenshots in.  If not specified, it's taken from the BrowserScope.config.screenshotPath property.
  */
-module.exports = async function(screenName, rootDir) {
+module.exports = async function (screenName, rootDir) {
   const screenshotPath = rootDir ? rootDir : this.config.screenshotPath
   const environment = this.config.environment
     ? `-${this.config.environment}`

@@ -1,8 +1,8 @@
 // Hooks are fired before and after each cucumber scenario and are used
 // for context setups and teardowns.
 
-const {After, Before, AfterAll} = require('cucumber')
-const scope = require('./support/scope')
+import {After, Before, AfterAll} from 'cucumber'
+import scope from './support/scope'
 
 Before(async () => {
   // You can clean up database models here

@@ -1,42 +1,42 @@
-const {Given} = require('cucumber')
-const checkAccessibility = require('../support/check/checkAccessibility')
-const checkAttribute = require('../support/check/checkAttribute')
-const checkAttributeContains = require('../support/check/checkAttributeContains')
-const checkContainsText = require('../support/check/checkContainsText')
-const checkElementEnabled = require('../support/check/checkElementEnabled')
-const checkElementExists = require('../support/check/checkElementExists')
-const checkElementValue = require('../support/check/checkElementValue')
-const checkElementVisible = require('../support/check/checkElementVisible')
-const checkIsEmpty = require('../support/check/checkIsEmpty')
-const checkUrl = require('../support/check/checkUrl')
-const checkHasFocus = require('../support/check/checkHasFocus')
-const checkIsChecked = require('../support/check/checkIsChecked')
-const checkCookieExists = require('../support/check/checkCookieExists')
-const checkCookieValue = require('../support/check/checkCookieValue')
-const checkScreenshot = require('../support/check/checkScreenshot')
-const openUrl = require('../support/action/openUrl')
-const checkTitleContains = require('../support/check/checkTitleContains')
-const checkUrlContains = require('../support/check/checkUrlContains')
+import {Given} from 'cucumber'
+import checkAccessibility from '../support/check/checkAccessibility'
+import checkAttribute from '../support/check/checkAttribute'
+import checkAttributeContains from '../support/check/checkAttributeContains'
+import checkContainsText from '../support/check/checkContainsText'
+import checkElementEnabled from '../support/check/checkElementEnabled'
+import checkElementExists from '../support/check/checkElementExists'
+import checkElementValue from '../support/check/checkElementValue'
+import checkElementVisible from '../support/check/checkElementVisible'
+import checkIsEmpty from '../support/check/checkIsEmpty'
+import checkUrl from '../support/check/checkUrl'
+import checkHasFocus from '../support/check/checkHasFocus'
+import checkIsChecked from '../support/check/checkIsChecked'
+import checkCookieExists from '../support/check/checkCookieExists'
+import checkCookieValue from '../support/check/checkCookieValue'
+import checkScreenshot from '../support/check/checkScreenshot'
+import openUrl from '../support/action/openUrl'
+import checkTitleContains from '../support/check/checkTitleContains'
+import checkUrlContains from '../support/check/checkUrlContains'
 
-Given('the url {string-env} is opened', async function(url) {
+Given('the url {string-env} is opened', async function (url) {
   await openUrl.call(this, url)
 })
 
-Given('the url {string-env} with user agent {string} is opened', async function(
-  url,
-  userAgent,
-) {
-  await openUrl.call(this, url, userAgent)
-})
+Given(
+  'the url {string-env} with user agent {string} is opened',
+  async function (url, userAgent) {
+    await openUrl.call(this, url, userAgent)
+  },
+)
 
-Given('the url {string-env} with device {string} is opened', async function(
+Given('the url {string-env} with device {string} is opened', async function (
   url,
   device,
 ) {
   await openUrl.call(this, url, null, device)
 })
 
-Given(/^the element "([^"]*)" is( not)? visible$/, async function(
+Given(/^the element "([^"]*)" is( not)? visible$/, async function (
   selector,
   not,
 ) {
@@ -45,7 +45,7 @@ Given(/^the element "([^"]*)" is( not)? visible$/, async function(
 
 Given(
   /^the element "([^"]*)" is( not)? visible after "([^"]*)" seconds$/,
-  async function(selector, not, seconds) {
+  async function (selector, not, seconds) {
     await checkElementVisible.call(this, selector, not, seconds)
   },
 )
@@ -87,7 +87,7 @@ Given(/^the page title (does not )?contains? "([^"]*)?"$/, checkTitleContains)
 
 Given(/^the page url (does not )?contains? "([^"]*)?"$/, checkUrlContains)
 
-Given(/^the screenshot of "([^"]*)?" matches the web page?$/, async function(
+Given(/^the screenshot of "([^"]*)?" matches the web page?$/, async function (
   filename,
 ) {
   await checkScreenshot.call(this, filename)

@@ -1,4 +1,4 @@
-const BrowserScope = require('./BrowserScope')
+import BrowserScope from './BrowserScope'
 
 /**
  * Common context for all scenarios in a feature file.  Allows us to keep the same browser and

@@ -2,7 +2,7 @@
  * Configure the test suite
  * https://github.com/cucumber/cucumber-js/blob/master/docs/support_files/api_reference.md
  */
-const {
+import {
   After,
   AfterAll,
   Before,
@@ -11,10 +11,10 @@ const {
   defineParameterType,
   setDefaultTimeout,
   setWorldConstructor,
-} = require('cucumber')
-const FeatureScope = require('./scope/FeatureScope')
-const BrowserScope = require('./scope/BrowserScope')
-const {createFolder} = require('./util/FileSystem')
+} from 'cucumber'
+import FeatureScope from './scope/FeatureScope'
+import BrowserScope from './scope/BrowserScope'
+import {createFolder} from './util/FileSystem'
 
 // Process .env file
 require('dotenv').config()
@@ -58,7 +58,7 @@ const config = {
 }
 
 // Create required folders
-BeforeAll(async function() {
+BeforeAll(async function () {
   await createFolder(`${config.reportPath}`)
   await createFolder(`${config.screenshotPath}/compare`)
   await createFolder(`${config.screenshotPath}/diff`)
@@ -67,7 +67,7 @@ BeforeAll(async function() {
 })
 
 // Use the same BrowserScope object for each scenario in a feature
-Before(async function(scenario) {
+Before(async function (scenario) {
   // Check if the current scenario is in the same feature test
   const currentFeature = scenario.sourceLocation.uri
   if (featureScope.isNewFeature(currentFeature))
@@ -79,7 +79,7 @@ Before(async function(scenario) {
 })
 
 // After hook for each scenario
-After(async function(scenario) {
+After(async function (scenario) {
   featureScope.browserScope = this
 
   // Take a screenshot if a scenario fails
@@ -92,6 +92,6 @@ After(async function(scenario) {
 })
 
 // After all feature tests are complete
-AfterAll(async function() {
+AfterAll(async function () {
   await featureScope.browserScope.close()
 })

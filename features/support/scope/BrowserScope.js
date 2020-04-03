@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer')
+import puppeteer from 'puppeteer'
 const puppeteerOptions = require('../../../package.json').puppeteerOptions
 
 /**

@@ -26,7 +26,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     '@typescript-eslint/member-delimiter-style': 'off',
-    '@typescript-eslint/no-var-requires': 'warn',
+    '@typescript-eslint/explicit-function-return-type': 'warn', //sctivate when on 100% ts
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
@@ -40,7 +40,7 @@ module.exports = {
     'no-caller': 'error',
     'no-console': 'error',
     'no-else-return': 'error',
-    'no-empty-function': 'warn',
+    'no-empty-function': 'error',
     'no-eq-null': 'error',
     'no-eval': 'error',
     'no-extra-bind': 'error',
