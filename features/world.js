@@ -1,4 +1,4 @@
-const { setWorldConstructor, setDefaultTimeout } = require('cucumber')
+const {setWorldConstructor, setDefaultTimeout} = require('cucumber')
 const puppeteer = require('puppeteer')
 const scope = require('./support/scope')
 

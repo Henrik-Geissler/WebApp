@@ -1,7 +1,7 @@
 // Hooks are fired before and after each cucumber scenario and are used
 // for context setups and teardowns.
 
-const { After, Before, AfterAll } = require('cucumber')
+const {After, Before, AfterAll} = require('cucumber')
 const scope = require('./support/scope')
 
 Before(async () => {
