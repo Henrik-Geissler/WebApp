@@ -6,7 +6,7 @@ import AxeReports from 'axe-reports'
  * Uses the Axe accessibility library to check the accessibility of the page.
  * @param {String} reportName Name of the a11y report if errors are found.
  */
-module.exports = async function (reportName) {
+module.exports = async function(reportName) {
   const results = await new AxePuppeteer(this.page)
     .withTags(['wcag2a', 'wcag2aa'])
     .analyze()

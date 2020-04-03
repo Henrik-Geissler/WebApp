@@ -21,7 +21,7 @@ import checkScreenshot from '../support/check/checkScreenshot'
 
 Then(/^I expect that the title is "([^"]*)"$/, checkTitle)
 
-Then(/^I expect the element "([^"]*)" is( not)? visible$/, async function (
+Then(/^I expect the element "([^"]*)" is( not)? visible$/, async function(
   selector,
   not,
 ) {
@@ -30,7 +30,7 @@ Then(/^I expect the element "([^"]*)" is( not)? visible$/, async function (
 
 Then(
   /^I expect the element "([^"]*)" is( not)? visible after "([^"]*)" seconds$/,
-  async function (selector, not, seconds) {
+  async function(selector, not, seconds) {
     await checkElementVisible.call(this, selector, not, seconds)
   },
 )
@@ -94,7 +94,7 @@ Then(
 
 Then(
   /^I expect the screenshot of "([^"]*)?" matches the web page?$/,
-  async function (filename) {
+  async function(filename) {
     await checkScreenshot.call(this, filename)
   },
 )
