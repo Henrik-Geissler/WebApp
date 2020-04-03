@@ -11,8 +11,7 @@ import React from 'react'
 import {RouteComponentProps} from 'react-router'
 import ExploreContainer from '../components/ExploreContainer'
 import './Page.css'
-
-const Page: React.FC<RouteComponentProps<{name: string}>> = ({match}) => {
+function Page({match}: RouteComponentProps<{name: string}>): JSX.Element {
   return (
     <IonPage>
       <IonHeader>

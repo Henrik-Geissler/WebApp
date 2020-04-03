@@ -4,6 +4,7 @@ import React, {useState} from 'react'
 import {IonApp, IonRouterOutlet, IonSplitPane} from '@ionic/react'
 import {IonReactRouter} from '@ionic/react-router'
 import {Redirect, Route} from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -24,9 +25,7 @@ import '@ionic/react/css/display.css'
 /* Theme variables */
 import './theme/variables.css'
 
-console.log('hi')
-
-const App: React.FC = () => {
+function App(): JSX.Element {
   const [selectedPage, setSelectedPage] = useState('')
 
   return (
@@ -37,7 +36,7 @@ const App: React.FC = () => {
           <IonRouterOutlet id="main">
             <Route
               path="/page/:name"
-              render={props => {
+              render={function(props): JSX.Element {
                 setSelectedPage(props.match.params.name)
                 return <Page {...props} />
               }}
@@ -45,7 +44,7 @@ const App: React.FC = () => {
             />
             <Route
               path="/"
-              render={() => <Redirect to="/page/Inbox" />}
+              render={(): JSX.Element => <Redirect to="/page/Inbox" />}
               exact={true}
             />
           </IonRouterOutlet>
@@ -55,4 +54,11 @@ const App: React.FC = () => {
   )
 }
 
+App.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }),
+  }),
+}
 export default App

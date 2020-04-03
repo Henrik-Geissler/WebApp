@@ -5,7 +5,7 @@ interface ContainerProps {
   name: string
 }
 
-const ExploreContainer: React.FC<ContainerProps> = ({name}) => {
+function ExploreContainer({name}: ContainerProps): JSX.Element {
   return (
     <div className="container">
       <strong>{name}</strong>

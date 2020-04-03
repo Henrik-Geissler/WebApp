@@ -1,5 +1,5 @@
 {
-  "name": "WebApp",
+  "name": "webapp",
   "version": "0.0.1",
   "private": true,
   "author": {
@@ -11,9 +11,6 @@
   },
   "homepage": "https://henrik-geissler.github.io/WebApp",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.25.0",
-    "@typescript-eslint/parser": "^2.25.0",
-    "eslint-plugin-react": "^7.19.0",
     "@capacitor/core": "1.5.2",
     "@ionic/react": "^5.0.7",
     "@ionic/react-router": "^5.0.7",
@@ -26,6 +23,9 @@
     "@types/react-dom": "^16.9.4",
     "@types/react-router": "^5.1.4",
     "@types/react-router-dom": "^5.1.3",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint-plugin-react": "^7.19.0",
     "ionicons": "^5.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
