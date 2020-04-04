@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     strategy:
       matrix:
         node-version: [12.x]
@@ -66,9 +66,9 @@ jobs:
 
       - name: Setup Files for Puppeteer
         run: |
-          sed -i 's/localhost/10\.1\.0\.4/g' features/step_definitions/given.js
-          sed -i 's/localhost/10\.1\.0\.4/g' features/step_definitions/when.js
-          sed -i 's/headless: false/headless: true/g' features/support/scope/BrowserScope.js
+          sed -i '' 's/localhost/10\.1\.0\.4/g' features/step_definitions/given.js
+          sed -i '' 's/localhost/10\.1\.0\.4/g' features/step_definitions/when.js
+          sed -i '' 's/headless: false/headless: true/g' features/support/scope/BrowserScope.js
 
       - name: Run Puppeteer E2E Tests
         uses: ianwalter/puppeteer@master
@@ -77,9 +77,9 @@ jobs:
 
       - name: Setup Files for Commit
         run: |
-          sed -i 's/10\.1\.0\.4/localhost/g' features/step_definitions/given.js
-          sed -i 's/10\.1\.0\.4/localhost/g' features/step_definitions/when.js
-          sed -i 's/headless: true/headless: false/g' features/support/scope/BrowserScope.js
+          sed -i '' 's/10\.1\.0\.4/localhost/g' features/step_definitions/given.js
+          sed -i '' 's/10\.1\.0\.4/localhost/g' features/step_definitions/when.js
+          sed -i '' 's/headless: true/headless: false/g' features/support/scope/BrowserScope.js
 
       - name: Commit and Push Changes
         uses: mikeal/publish-to-github-action@master
