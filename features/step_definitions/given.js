@@ -18,7 +18,15 @@ const openUrl = require('../support/action/openUrl')
 const checkTitleContains = require('../support/check/checkTitleContains')
 const checkUrlContains = require('../support/check/checkUrlContains')
 
+//const host = 'http://10.1.0.4:3000/'
+const host = 'http://localhost:3000/'
+
 Given('the url {string-env} is opened', async function (url) {
+  await openUrl.call(this, url)
+})
+
+Given('the page {string-env} is opened', async function (page) {
+  const url = ''.concat(host, page)
   await openUrl.call(this, url)
 })
 
@@ -29,10 +37,26 @@ Given(
   },
 )
 
+Given(
+  'the page {string-env} with user agent {string} is opened',
+  async function (page, userAgent) {
+    const url = ''.concat(host, page)
+    await openUrl.call(this, url, userAgent)
+  },
+)
+
 Given('the url {string-env} with device {string} is opened', async function (
   url,
   device,
 ) {
+  await openUrl.call(this, url, null, device)
+})
+
+Given('the page {string-env} with device {string} is opened', async function (
+  page,
+  device,
+) {
+  const url = ''.concat(host, page)
   await openUrl.call(this, url, null, device)
 })
 
