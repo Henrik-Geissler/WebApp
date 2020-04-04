@@ -50,7 +50,7 @@ jobs:
         run: ./node_modules/.bin/eslint --fix "**/*.*"
 
       - name: Run Linter Prettier
-        run: ./node_modules/.bin/prettier --write "**/*.*"  
+        run: ./node_modules/.bin/prettier --write --config ./.prettierrc "**/*.*"  
 
       - name: Run Jest UNIT Tests
         run: yarn test-ci:unit
