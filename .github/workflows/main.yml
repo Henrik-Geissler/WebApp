@@ -47,7 +47,8 @@ jobs:
         run: yarn build
 
       - name: Host App locally
-        run: ./node_modules/.bin/serve -s build -l 3000 & (sleep 30 && exit)
+        run: yarn start & (sleep 30 && exit)
+        #run: ./node_modules/.bin/serve -s build -l 3000 & (sleep 30 && exit)
 
       - name: Setup Files for Puppeteer
         run: |
