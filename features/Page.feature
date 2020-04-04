@@ -2,28 +2,17 @@ Feature: Page Feature
 
     In order to explore the Ionic UI Components
     As a user
-    I want to be able access the Ionic UI Component Manual
-
-    Scenario: The Website should be accessable
-        #  E2ETest #1 : Expect the Website to match Accessability Criteria
-        Given the url "http://www.google.com" is opened
-        Then  I expect the "index" page has no accessibility errors
-
-    Scenario: The Website should be accessable
-        #  E2ETest #1 : Expect the Website to match Accessability Criteria
-        Given the url "http://10.1.0.4:3000/WebApp/index.html" is opened
-        When  I click the link "#page_Inbox"
-        Then  I expect the "index" page has no accessibility errors
+    I want to be able access the Ionic UI Component Documentation
 
     Scenario: The Website should match the Screenshot
-        #  E2ETest #2 : Expect the Website to match Screenshot
-        Given the url "http://localhost:3000/index.html" is opened
-        When  I click the link "#page_Inbox"
-        Then  I expect the screenshot of "ccc-hangman" matches the web page
+        #  E2ETest #1 : Expect the Website to match Screenshot
+        Given the page "page/Inbox" is opened
+        Then  I expect the screenshot of "inbox" matches the web page
 
-    Scenario: Visit the Authers github website
+    Scenario: Visit the Ionic UI Components Documentation
         #  E2ETest #3 : Click on a link and expect to be on a different Page
-        Given the url "http://localhost:3000/index.html" is opened
-        When  I click the link "#page_Inbox"
-        And  I click the link "#ui_components"
-        Then  I expect the page url is "https://github.com/vetrivelcsamy/reactjs-hangman"
+        Given the page "page/Inbox" is opened
+        When  I click the element "ion-menu-button"
+        And  I click the element "#page_Inbox"
+        And  I click the element "#ui_components"
+        Then  I expect the page url is "https://ionicframework.com/docs/components"
