@@ -63,8 +63,8 @@ jobs:
 
       - name: Change localhost to Network 
         run: |
-          sed -i '' 's/localhost/10\.1\.0\.4/g' features/step_definitions/given.js
-          sed -i '' 's/localhost/10\.1\.0\.4/g' features/step_definitions/when.js
+          sed -i 's/localhost/10\.1\.0\.4/g' features/step_definitions/given.js
+          sed -i 's/localhost/10\.1\.0\.4/g' features/step_definitions/when.js
 
       - name: Host App locally
         run: |
