@@ -48,6 +48,7 @@ jobs:
 
       - name: Host App locally
         run: yarn start & (sleep 30 && exit)
+        #TODO use build instead of devbuilding again
         #run: ./node_modules/.bin/serve -s build -l 3000 & (sleep 30 && exit)
 
       - name: Setup Files for Puppeteer
