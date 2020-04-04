@@ -1,10 +1,10 @@
 # testing
+/test/reports
 /test/screenshots/compare
 /test/screenshots/diff
 /test/screenshots/error
-/test/reports
+/test/*.command
 /coverage
-*.command
 
 # dependencies
 /node_modules
