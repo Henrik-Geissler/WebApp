@@ -6,7 +6,12 @@ Feature: Page Feature
 
     Scenario: The Website should be accessable
         #  E2ETest #1 : Expect the Website to match Accessability Criteria
-        Given the url "http://localhost:3000/index.html" is opened
+        Given the url "http://www.google.com" is opened
+        Then  I expect the "index" page has no accessibility errors
+
+    Scenario: The Website should be accessable
+        #  E2ETest #1 : Expect the Website to match Accessability Criteria
+        Given the url "http://localhost:3000/WebApp/index.html" is opened
         When  I click the link "#page_Inbox"
         Then  I expect the "index" page has no accessibility errors
 
