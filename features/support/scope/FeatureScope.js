@@ -48,7 +48,7 @@ class FeatureScope {
 
   async coverageStop() {
     if (this.browserScope && this.browserScope.page) {
-      [this.coverageJs, this.coverageCss] = await Promise.all([
+      ;[this.coverageJs, this.coverageCss] = await Promise.all([
         this.browserScope.page.coverage.stopJSCoverage(),
         this.browserScope.page.coverage.stopCSSCoverage(),
       ])
