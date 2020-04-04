@@ -63,8 +63,6 @@
   },
   "devDependencies": {
     "@capacitor/cli": "1.5.2",
-    "axe-puppeteer": "^1.0.0",
-    "axe-reports": "^1.1.11",
     "cucumber": "5.0.2",
     "expect": "24.5.0",
     "gh-pages": "^2.2.0",

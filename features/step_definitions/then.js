@@ -1,5 +1,4 @@
 const {Then} = require('cucumber')
-const checkAccessibility = require('../support/check/checkAccessibility')
 const checkAttribute = require('../support/check/checkAttribute')
 const checkAttributeContains = require('../support/check/checkAttributeContains')
 const checkContainsText = require('../support/check/checkContainsText')
@@ -97,9 +96,4 @@ Then(
   async function(filename) {
     await checkScreenshot.call(this, filename)
   },
-)
-
-Then(
-  'I expect the {string} page has no accessibility errors',
-  checkAccessibility,
 )

@@ -1,5 +1,4 @@
 const {Given} = require('cucumber')
-const checkAccessibility = require('../support/check/checkAccessibility')
 const checkAttribute = require('../support/check/checkAttribute')
 const checkAttributeContains = require('../support/check/checkAttributeContains')
 const checkContainsText = require('../support/check/checkContainsText')
@@ -115,5 +114,3 @@ Given(/^the screenshot of "([^"]*)?" matches the web page?$/, async function(
 ) {
   await checkScreenshot.call(this, filename)
 })
-
-Given('the {string} page has no accessibility errors', checkAccessibility)
