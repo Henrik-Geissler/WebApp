@@ -42,7 +42,7 @@ module.exports = async function(screenName, rootDir) {
   // If there's no reference screenshot, save the taken screenshot as the new reference
   if (!(await pathExists(pathRef))) {
     await copyFile(pathCompare, pathRef)
-    //throw new Error('Expected reference screenshot to exist at ' + pathRef)
+    throw new Error('Expected reference screenshot to exist at ' + pathRef)
 
     // Compare the two screenshots
   } else {
@@ -79,6 +79,6 @@ module.exports = async function(screenName, rootDir) {
       await imgDiff.pack().pipe(fs.createWriteStream(pathDiff))
     }
 
-    assert.strictEqual(0, 0, 'Expected screenshots to match.')
+    assert.strictEqual(diffPixels, 0, 'Expected screenshots to match.')
   }
 }
