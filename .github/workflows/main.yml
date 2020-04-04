@@ -67,7 +67,11 @@ jobs:
           git show-ref
           git add --all
           git commit -m "Add existing file"
-          git push -u origin HEAD:master
+          #git push -u origin HEAD:master
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       #- name: Commit and Push Changes
        # uses: mikeal/publish-to-github-action@master
