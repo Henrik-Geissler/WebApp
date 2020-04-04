@@ -1,8 +1,8 @@
 {
   "name": "Sidemenu Starter",
   "baseref": "master",
-  "tarignore": ["node_modules", "package-lock.json", "www"],
+  "tarignore": ["node_modules", "yarn.lock", "www"],
   "scripts": {
-    "test": "npm run build"
+    "test": "yarn run build"
   }
 }
