@@ -18,7 +18,6 @@ const openUrl = require('../support/action/openUrl')
 const checkTitleContains = require('../support/check/checkTitleContains')
 const checkUrlContains = require('../support/check/checkUrlContains')
 
-//const host = 'http://10.1.0.4:3000/'
 const host = 'http://localhost:3000/'
 
 Given('the url {string-env} is opened', async function (url) {

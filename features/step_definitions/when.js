@@ -12,8 +12,7 @@ const scrollToElement = require('../support/action/scrollToElement')
 const waitFor = require('../support/action/waitFor')
 const waitForSelector = require('../support/action/waitForSelector')
 
-const host = 'http://10.1.0.4:3000/'
-//const host = 'http://localhost:3000/'
+const host = 'http://localhost:3000/'
 
 When('I open the url {string-env}', async function (url) {
   await openUrl.call(this, url)

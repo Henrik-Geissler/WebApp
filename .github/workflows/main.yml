@@ -61,13 +61,24 @@ jobs:
       - name: Build App
         run: yarn build
 
+      - name: Change localhost to Network 
+        run: |
+          sed -i '' 's/localhost/10\.1\.0\.4/g' features/step_definitions/given.js
+          sed -i '' 's/localhost/10\.1\.0\.4/g' features/step_definitions/when.js
+
       - name: Host App locally
-        run: yarn start & (sleep 30 && exit)
+        run: |
+          yarn start & (sleep 30 && exit)
 
       - name: Run Puppeteer E2E Tests
         uses: ianwalter/puppeteer@master
         with:
           args: yarn test-ci:e2e
+
+      - name: Revert Hostname Changes
+        run: |
+          sed -i '' 's/10\.1\.0\.4/localhost/g' features/step_definitions/given.js
+          sed -i '' 's/10\.1\.0\.4/localhost/g' features/step_definitions/when.js
 
       - name: Commit and Push Changes
         uses: mikeal/publish-to-github-action@master
