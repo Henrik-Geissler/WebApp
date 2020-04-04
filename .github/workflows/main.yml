@@ -61,7 +61,7 @@ jobs:
       - name: Build App
         run: yarn build
 
-      - name: Setup for Puppeteer
+      - name: Setup Files for Puppeteer
         run: |
           sed -i 's/localhost/10\.1\.0\.4/g' features/step_definitions/given.js
           sed -i 's/localhost/10\.1\.0\.4/g' features/step_definitions/when.js
@@ -76,7 +76,7 @@ jobs:
         with:
           args: yarn test-ci:e2e
 
-      - name: Revert Setup for Puppeteer
+      - name: Setup Files for Commit
         run: |
           sed -i 's/10\.1\.0\.4/localhost/g' features/step_definitions/given.js
           sed -i 's/10\.1\.0\.4/localhost/g' features/step_definitions/when.js
