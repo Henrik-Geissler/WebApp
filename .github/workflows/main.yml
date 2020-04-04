@@ -68,12 +68,18 @@ jobs:
           git config --local user.name "GitHub Action"
           git show-ref
           git add --all
-          git commit -m --allow-empty "CI"
+          git commit --allow-empty -m "CI"
           
       - name: Push changes to master
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Push changes to stable
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: stable
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
