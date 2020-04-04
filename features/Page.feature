@@ -5,14 +5,19 @@ Feature: Page Feature
     I want to be able access the Ionic UI Component Documentation
 
     Scenario: The Website should match the Screenshot
-        #  E2ETest #1 : Expect the Website to match Screenshot
         Given the page "page/Inbox" is opened
         Then  I expect the screenshot of "inbox" matches the web page
 
-    Scenario: Visit the Ionic UI Components Documentation
-        #  E2ETest #3 : Click on a link and expect to be on a different Page
+    Scenario: Visit other Pages via the Menu
         Given the page "page/Inbox" is opened
         When  I click the element "ion-menu-button"
-        And  I click the element "#page_Inbox"
+        And   I wait for 1.0 seconds
+        And   I click the element "#page_Outbox"
+        Then  I expect the page url contains "page/Outbox"
+
+    Scenario: Visit the Ionic UI Components Documentation
+        Given the page "page/Inbox" is opened
+        When  I click the element "ion-menu-button"
+        And   I wait for 1.0 seconds
         And  I click the element "#ui_components"
         Then  I expect the page url is "https://ionicframework.com/docs/components"
