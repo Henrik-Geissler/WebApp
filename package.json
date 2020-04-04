@@ -43,8 +43,8 @@
     "test:e2e": "PORT=3000 NODE_ENV=debug cucumber-js features",
     "test:unit": "react-scripts test --watchAll --coverage",
     "test-async:all": "yarn test-async:unit && yarn test-async:e2e",
-    "test-async:unit": "echo \"cd \"`pwd`\";yarn test:unit;exit;\" > \"`pwd`\"/UNIT_Test.command; chmod +x \"`pwd`\"/UNIT_Test.command; open \"`pwd`\"/UNIT_Test.command",
-    "test-async:e2e": "echo \"cd \"`pwd`\";yarn test:e2e;exit;\" > \"`pwd`\"/E2E_Test.command; chmod +x \"`pwd`\"/E2E_Test.command; open \"`pwd`\"/E2E_Test.command",
+    "test-async:unit": "echo \"cd \"`pwd`\";yarn test:unit;exit;\" > \"`pwd`\"/test/UNIT_Test.command; chmod +x \"`pwd`\"/test/UNIT_Test.command; open \"`pwd`\"/test/UNIT_Test.command",
+    "test-async:e2e": "echo \"cd \"`pwd`\";yarn test:e2e;exit;\" > \"`pwd`\"/test/E2E_Test.command; chmod +x \"`pwd`\"/test/E2E_Test.command; open \"`pwd`\"/test/E2E_Test.command",
     "test-ci:unit": "react-scripts test --watchAll=false --forceExit --detectOpenHandles --ci",
     "test-ci:e2e": "PORT=3000 cucumber-js features --exit",
     "eject": "react-scripts eject"
