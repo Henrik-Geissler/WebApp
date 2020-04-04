@@ -51,8 +51,6 @@ jobs:
 
       - name: Setup Files for Puppeteer
         run: |
-          sed -i '' 's/localhost/10\.79\.1\.179/g' features/step_definitions/given.js
-          sed -i '' 's/localhost/10\.79\.1\.179/g' features/step_definitions/when.js
           sed -i '' 's/headless: false/headless: true/g' features/support/scope/BrowserScope.js
 
       - name: Run Puppeteer E2E Tests
@@ -60,8 +58,6 @@ jobs:
 
       - name: Setup Files for Commit
         run: |
-          sed -i '' 's/10\.79\.1\.179/localhost/g' features/step_definitions/given.js
-          sed -i '' 's/10\.79\.1\.179/localhost/g' features/step_definitions/when.js
           sed -i '' 's/headless: true/headless: false/g' features/support/scope/BrowserScope.js
 
       - name: Log Git Status
