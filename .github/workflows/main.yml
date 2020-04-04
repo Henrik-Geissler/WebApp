@@ -60,13 +60,13 @@ jobs:
         run: |
           sed -i '' 's/headless: true/headless: false/g' features/support/scope/BrowserScope.js
 
-      - name: Log Git Status
-        run: git status
+      - name: Git commit and push to master
+        run: git add . && git commit -m "Add existing file" && git push origin master
 
-      - name: Commit and Push Changes
-        uses: mikeal/publish-to-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Commit and Push Changes
+       # uses: mikeal/publish-to-github-action@master
+        #env:
+         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
