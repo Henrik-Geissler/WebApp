@@ -4,6 +4,7 @@
 /test/screenshots/error
 /test/reports
 /coverage
+*.command
 
 # dependencies
 /node_modules
