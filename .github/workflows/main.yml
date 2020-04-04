@@ -44,13 +44,13 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install Packages
-        run: yarn install
-
-      - name: Run Linter Prettier
-        run: ./node_modules/.bin/prettier --write "**/*.*"   
+        run: yarn install 
 
       - name: Run Linter ESLint
         run: ./node_modules/.bin/eslint --fix "**/*.*"
+
+      - name: Run Linter Prettier
+        run: ./node_modules/.bin/prettier --write "**/*.*"  
 
       - name: Run Jest UNIT Tests
         run: yarn test-ci:unit
