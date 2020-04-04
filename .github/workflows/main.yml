@@ -43,8 +43,11 @@ jobs:
       - name: Run Jest UNIT Tests
         run: yarn test-ci:unit
 
+      - name: Build App
+        run: yarn build
+
       - name: Host App locally
-        run: yarn start & (sleep 30 && exit)
+        run: serve -s build & (sleep 30 && exit)
 
       - name: Setup Files for Puppeteer
         run: |
