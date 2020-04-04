@@ -6,7 +6,7 @@ Feature: Page Feature
 
     Scenario: The Website should match the Screenshot
         Given the page "page/Inbox" is opened
-        And   I wait for 10.0 seconds
+        And   I wait for 1.0 seconds
         Then  I expect the screenshot of "inbox" matches the web page
 
     Scenario: Visit other Pages via the Menu
@@ -18,5 +18,6 @@ Feature: Page Feature
 
     Scenario: Visit the Ionic UI Components Documentation
         Given the page "page/Inbox" is opened
+        And   I wait for 1.0 seconds
         When  I click the element "#ui_components"
         Then  I expect the page url is "https://ionicframework.com/docs/components"
