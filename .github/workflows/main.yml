@@ -51,8 +51,6 @@ jobs:
 
       - name: Setup Files for Puppeteer
         run: |
-          sed -i '' 's/localhost/10\.1\.0\.4/g' features/step_definitions/given.js
-          sed -i '' 's/localhost/10\.1\.0\.4/g' features/step_definitions/when.js
           sed -i '' 's/headless: false/headless: true/g' features/support/scope/BrowserScope.js
 
       - name: Run Puppeteer E2E Tests
