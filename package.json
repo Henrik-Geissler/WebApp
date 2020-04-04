@@ -70,7 +70,8 @@
     "gh-pages": "^2.2.0",
     "pixelmatch": "^5.0.0",
     "prettier": "^1.19.1",
-    "puppeteer": "1.9.0"
+    "puppeteer": "1.9.0",
+    "serve": "^11.3.0"
   },
   "jest": {
     "collectCoverageFrom": [
