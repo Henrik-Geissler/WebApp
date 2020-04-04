@@ -39,11 +39,11 @@
     "build": "react-scripts build",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "test": "yarn test:e2e-headless",
+    "test": "yarn test-ci:e2e",
     "test:e2e": "PORT=3000 NODE_ENV=debug cucumber-js features",
-    "test:e2e-headless": "PORT=3000 cucumber-js features",
+    "test-ci:e2e": "PORT=3000 cucumber-js features --exit",
     "test:unit": "react-scripts test --watchAll --coverage",
-    "test:unitCI": "react-scripts test --watchAll=false --forceExit --detectOpenHandles --ci",
+    "test-ci:unit": "react-scripts test --watchAll=false --forceExit --detectOpenHandles --ci",
     "eject": "react-scripts eject"
   },
   "browserslist": {

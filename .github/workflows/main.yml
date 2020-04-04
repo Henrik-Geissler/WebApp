@@ -56,7 +56,7 @@ jobs:
         run: git status
 
       - name: Run Jest UNIT Tests
-        run: yarn test:unitCI
+        run: yarn test-ci:unit
 
       - name: Build App
         run: yarn build
@@ -67,7 +67,7 @@ jobs:
       - name: Run Puppeteer E2E Tests
         uses: ianwalter/puppeteer@master
         with:
-          args: yarn test
+          args: yarn test-ci:e2e
 
       - name: Commit and Push Changes
         uses: mikeal/publish-to-github-action@master
