@@ -68,7 +68,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git show-ref
           git add --all
-          git commit --allow-empty -m "CI"
+          git commit --allow-empty -m "CI_Automation"
           
       - name: Push changes to master
         uses: ad-m/github-push-action@master
