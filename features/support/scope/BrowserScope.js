@@ -25,6 +25,7 @@ class BrowserScope {
       ...defaultOptions,
       ...puppeteerOptions,
       ...this.worldParameters,
+      headless: false,
     })
     this.page = await this.browser.newPage()
   }
