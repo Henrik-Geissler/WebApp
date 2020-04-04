@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     strategy:
       matrix:
         node-version: [12.x]
@@ -31,18 +31,6 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "${GITHUB_CONTEXT}"
 
-      - name: Log yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
       - name: Install Packages
         run: yarn install 
 
@@ -54,9 +42,6 @@ jobs:
 
       - name: Run Jest UNIT Tests
         run: yarn test-ci:unit
-
-      - name: Build App
-        run: yarn build
 
       - name: Host App locally
         run: yarn start & (sleep 30 && exit)
