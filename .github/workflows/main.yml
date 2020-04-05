@@ -56,6 +56,9 @@ jobs:
           name: coverage
           path: coverage
 
+      - name: Add codecov report
+        run: codecov -t ${{secrets.CODECOV_TOKEN}}
+
       - name: Build App
         run: yarn build
 

@@ -66,6 +66,7 @@
   },
   "devDependencies": {
     "@capacitor/cli": "1.5.2",
+    "codecov": "^3.6.5",
     "cucumber": "5.0.2",
     "expect": "24.5.0",
     "gh-pages": "^2.2.0",
