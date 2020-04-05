@@ -1,6 +1,6 @@
 # WebApp
 
-A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3/cli/starters.html) including CI Linting, CI UNIT Testing, CI E2E Testing, CD Prereleasing, CD Deploying and generic testing libaries. Ready to fork from and start your CI/CD Ionic Project. 
+A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3/cli/starters.html) including CI Linting, CI UNIT Testing, CI E2E Testing, CD Prereleasing, CD Deploying and generic testing libaries. [See the App](https://henrik-geissler.github.io/page/Inbox)
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Henrik-Geissler/WebApp/CI)
 ![Codecov](https://img.shields.io/codecov/c/github/Henrik-Geissler/WebApp)
