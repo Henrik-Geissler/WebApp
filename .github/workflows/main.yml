@@ -50,8 +50,6 @@ jobs:
       - name: Run Jest UNIT Tests
         run: yarn test-ci:unit
 
-
-
       - name: Upload test coverage as artifact
         uses: actions/upload-artifact@v1
         with:
@@ -83,7 +81,10 @@ jobs:
           git config --local user.name "CI Test Action"
           git add --all
           git diff-index --quiet HEAD || git commit -m "(CI)Test: ${{github.event.commits[0].message}}"
-          
+
+      - name: Release 
+        run: yarn release
+
       - name: Push changes to master
         run: git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:master
           
