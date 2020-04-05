@@ -9,6 +9,3 @@ Feature: checkScreenshot
 
   Scenario: Check screenshot matches then
     Then  I expect the screenshot of "ccc-landing" matches the web page
-
-
-

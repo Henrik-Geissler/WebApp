@@ -10,8 +10,3 @@ Feature: checkUrl
 
   Scenario: Check URL given
     Given the page url is "http://localhost:3000/checkTitle.html"
-
-
-
-
-

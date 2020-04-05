@@ -16,12 +16,3 @@ Feature: checkElementVisible
     When  I open the url "http://localhost:3000/waitFor.html"
     Then  I expect the element ".starts-hidden" is not visible
     And   I expect the element ".starts-hidden" is visible after "2.5" seconds
-
-  Scenario: Check for elements that appear after a timeout
-    Given the url "http://localhost:3000/waitFor.html" is opened
-    And   the element ".starts-hidden" is not visible
-    And   the element ".starts-hidden" is visible after "2.5" seconds
-
-
-
-

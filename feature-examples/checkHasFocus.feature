@@ -15,5 +15,3 @@ Feature: checkElementHasFocus
     When  I click the element "#tobe-focused"
     Then  I expect the element "#tobe-focused" has focus
     And   I expect the element "#no-focus" has no focus
-
-

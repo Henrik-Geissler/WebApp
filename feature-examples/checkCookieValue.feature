@@ -15,4 +15,3 @@ Feature: checkCookieValue
     And   the cookie "second-existing-cookie" value is not "42"
     And   the cookie "existing-cookie" value is "Cookie with a value"
     And   the cookie "second-existing-cookie" value is "Cookie with a new value"
-

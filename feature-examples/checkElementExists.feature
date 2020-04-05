@@ -16,6 +16,3 @@ Feature: checkElementExists
     And   element "ul" is on the page
     And   element ".foobs" is not on the page
     And   element "p:first-child" is not on the page
-
-
-

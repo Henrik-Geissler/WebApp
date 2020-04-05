@@ -13,6 +13,3 @@ Feature: checkAttributeConains
     Given the attribute "class" from element "#cssClass" not contain "weasel"
     And   the attribute "charset" from element "meta" contain "utf"
     And   the attribute "href" from element "a[id='href']" not contain "/pickle-rick"
-
-
-

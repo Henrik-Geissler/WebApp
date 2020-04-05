@@ -1,4 +1,5 @@
 Feature: checkAttribute
+
   In order write BDD tests
   As a developer
   I want to check if an element's attribute has a specific value
@@ -13,6 +14,3 @@ Feature: checkAttribute
     Given the attribute "class" from element "#cssClass" is not "foobar"
     And   the attribute "charset" from element "meta" is "utf-8"
     And   the attribute "href" from element "a[id='href']" is not "/pickle-rick"
-
-
-

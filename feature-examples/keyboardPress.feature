@@ -12,4 +12,3 @@ Feature: keyboardPress
     Given the element "input[type='text']" has no focus
     When  I press the "Enter" key on the "input[type='text']" element
     Then  I expect the element "input[type='text']" has focus
-

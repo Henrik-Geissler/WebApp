@@ -40,6 +40,9 @@ jobs:
       - name: Run Linter Prettier
         run: ./node_modules/.bin/prettier --write --config ./.prettierrc "**/*.*"  
 
+      - name: Run Linter Gherkin
+        run: ./node_modules/.bin/gherkin-lint -c ./.gherkin-lintrc "**/*.feature"  
+
       - name: Commit Lint Changes
         run: |
           git config --local user.email "action@github.com"

@@ -15,4 +15,3 @@ Feature: checkCookieExists
     And   the cookie "undefined-value-cookie" exist
     And   the cookie "second-existing-cookie" exist
     And   the cookie "a random cookie" not exist
-

@@ -19,4 +19,3 @@ Feature: scrollToElement
     When  I scroll to the element "#third"
     Then  I expect the element "#third-clue" contains text "In View"
     And   I expect the element "#first-clue" contains text "Out of View"
-

@@ -14,4 +14,3 @@ Feature: checkIsChecked
     When  I click the element "#tobe-checked"
     Then  the element "#tobe-checked" is checked
     And   the element "#checked" is checked
-

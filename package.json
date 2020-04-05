@@ -71,6 +71,7 @@
     "cucumber-pretty": "^6.0.0",
     "expect": "^25.2.7",
     "gh-pages": "^2.2.0",
+    "gherkin-lint": "^4.0.1",
     "ionic": "^5.4.16",
     "pixelmatch": "^5.1.0",
     "prettier": "^2.0.2",

@@ -13,6 +13,3 @@ Feature: checkIsEmpty
   Scenario: Check element empty given
     Given the element ".empty" is empty
     And   the element "ul li:first-child" is not empty
-
-
-

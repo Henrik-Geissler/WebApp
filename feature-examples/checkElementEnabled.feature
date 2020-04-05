@@ -12,6 +12,3 @@ Feature: checkElementEnabled
     Given the element "[type='button']" is not enabled
     And   the element ".enabled" is enabled
     And   the element "fieldset" is enabled
-
-
-
