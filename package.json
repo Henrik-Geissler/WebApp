@@ -5,6 +5,7 @@
   "author": {
     "name": "Henrik Geissler"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Henrik-Geissler/WebApp.git"
@@ -45,8 +46,9 @@
     "test-async:all": "yarn test-async:unit && yarn test-async:e2e",
     "test-async:unit": "echo \"cd \"`pwd`\";yarn test:unit;exit;\" > \"`pwd`\"/test/UNIT_Test.command; chmod +x \"`pwd`\"/test/UNIT_Test.command; open \"`pwd`\"/test/UNIT_Test.command",
     "test-async:e2e": "echo \"cd \"`pwd`\";yarn test:e2e;exit;\" > \"`pwd`\"/test/E2E_Test.command; chmod +x \"`pwd`\"/test/E2E_Test.command; open \"`pwd`\"/test/E2E_Test.command",
-    "test-ci:unit": "react-scripts test --watchAll=false --forceExit --detectOpenHandles --ci",
+    "test-ci:unit": "react-scripts test --watchAll=false --coverage --forceExit --detectOpenHandles --ci",
     "test-ci:e2e": "PORT=3000 cucumber-js features --exit",
+    "release": "standard-version",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -69,7 +71,8 @@
     "pixelmatch": "^5.0.0",
     "prettier": "^1.19.1",
     "puppeteer": "1.9.0",
-    "serve": "^11.3.0"
+    "serve": "^11.3.0",
+    "standard-version": "^7.1.0"
   },
   "jest": {
     "collectCoverageFrom": [

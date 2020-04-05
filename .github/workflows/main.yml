@@ -50,6 +50,14 @@ jobs:
       - name: Run Jest UNIT Tests
         run: yarn test-ci:unit
 
+
+
+      - name: Upload test coverage as artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: coverage
+          path: coverage
+
       - name: Build App
         run: yarn build
 
