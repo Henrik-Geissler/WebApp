@@ -7,7 +7,7 @@ const assert = require('assert').strict
  * @param {String} not The string "not" to negate the check (should not match the property value).
  * @param {String} expectedValue Expected value to check the property for.
  */
-module.exports = async function(attribute, selector, not, expectedValue) {
+module.exports = async function (attribute, selector, not, expectedValue) {
   /* istanbul ignore next */ // Required otherwise code coverage evaluation fails within $eval calls
   const attributeValue = await this.page.$eval(
     selector,

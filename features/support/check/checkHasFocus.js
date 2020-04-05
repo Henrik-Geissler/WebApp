@@ -5,7 +5,7 @@ const assert = require('assert').strict
  * @param {String} selector CSS selector of the element to check for child elements.
  * @param {String} not The string "not" to negate the check (the element should not have focus).
  */
-module.exports = async function(selector, not) {
+module.exports = async function (selector, not) {
   /* istanbul ignore next */ // Required otherwise code coverage evaluation fails within $eval calls
   const hasFocus = await this.page.$eval(
     selector,

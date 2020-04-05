@@ -2,7 +2,7 @@
  * Wait for a given number of seconds.
  * @param {Float} seconds The number of seconds to wait.
  */
-module.exports = async function(seconds) {
+module.exports = async function (seconds) {
   if (seconds > 0) {
     await this.page.waitFor(seconds * 1000)
   } else {

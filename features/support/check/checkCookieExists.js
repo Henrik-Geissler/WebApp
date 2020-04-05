@@ -5,7 +5,7 @@ const assert = require('assert').strict
  * @param {String} cname Cookie name to check for.
  * @param {String} not The string "not" to negate the check (cookie value should not exist).
  */
-module.exports = async function(cname, not) {
+module.exports = async function (cname, not) {
   let cookieNameFound
   const pageCookies = await this.page.cookies()
   const shouldCookieExist = not ? false : true

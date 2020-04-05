@@ -36,7 +36,7 @@ function App(): JSX.Element {
           <IonRouterOutlet id="main">
             <Route
               path="/page/:name"
-              render={function(props): JSX.Element {
+              render={function (props): JSX.Element {
                 setSelectedPage(props.match.params.name)
                 return <Page {...props} />
               }}

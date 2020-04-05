@@ -6,7 +6,7 @@ const assert = require('assert').strict
  * @param {String} not String "not" to indicate that the element should not have the given text.
  * @param {String} expectedText Text to check if the given element contains.
  */
-module.exports = async function(selector, not, expectedText) {
+module.exports = async function (selector, not, expectedText) {
   /* istanbul ignore next */ // Required otherwise code coverage evaluation fails within $eval calls
   const elementText = await this.page.$eval(selector, el => el.textContent)
   const containsText = elementText && elementText.includes(expectedText)

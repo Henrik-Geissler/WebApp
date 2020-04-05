@@ -4,7 +4,7 @@ const assert = require('assert').strict
  * Scrolls the element on which it's called into the visible area of the browser window.
  * @param {String} selector The selector of the element to scroll to.
  */
-module.exports = async function(selector) {
+module.exports = async function (selector) {
   let failed = null
 
   try {
