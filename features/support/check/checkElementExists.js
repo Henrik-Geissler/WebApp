@@ -5,7 +5,7 @@ const assert = require('assert').strict
  * @param {String} selector CSS selector of the element to check for.
  * @param {String} not The string "not" to negate the check (element should not exist).
  */
-module.exports = async function(selector, not) {
+module.exports = async function (selector, not) {
   const elem = await this.page.$(selector)
   const shouldElementExist = not ? false : true
 

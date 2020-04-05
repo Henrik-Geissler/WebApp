@@ -4,7 +4,7 @@
  * @param {String} styleProp CSS style property to set.
  * @param {String} styleValue CSS style value to set.
  */
-module.exports = async function(selector, styleProp, styleValue) {
+module.exports = async function (selector, styleProp, styleValue) {
   // Turn comma separated list of selectors into an array
   const selectors = selector.split(',')
 

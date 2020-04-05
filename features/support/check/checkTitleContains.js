@@ -5,7 +5,7 @@ const assert = require('assert').strict
  * @param {String} not String "not" to indicate that the element should not have the given text.
  * @param {String} substring Expected substring contained by the page title.
  */
-module.exports = async function(not, substring) {
+module.exports = async function (not, substring) {
   const titleValue = await this.page.title()
   const containsTitle =
     titleValue && substring && titleValue.includes(substring)

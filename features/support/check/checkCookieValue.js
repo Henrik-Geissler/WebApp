@@ -7,7 +7,7 @@ const assert = require('assert').strict
  * @param {String} cvalue Cookie value to check for.
  * @param {String} not The string "not" to negate the check (cookie value should not match).
  */
-module.exports = async function(cname, cvalue, not) {
+module.exports = async function (cname, cvalue, not) {
   let cookieValue
   let cookieNameFound
   const pageCookies = await this.page.cookies()

@@ -6,7 +6,7 @@ const assert = require('assert').strict
  * @param {String} not Null when checking for equality, otherwise checking for inequality.
  * @param {String} value The value to check for.
  */
-module.exports = async function(selector, not, value) {
+module.exports = async function (selector, not, value) {
   /* istanbul ignore next */ // Required otherwise code coverage evaluation fails within $eval calls
   const elementValue = await this.page.$eval(selector, el => el.value)
   const expectedValue = value === undefined || value === null ? '' : value

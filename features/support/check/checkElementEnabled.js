@@ -5,7 +5,7 @@ const assert = require('assert').strict
  * @param {String} selector CSS selector of the element to check.
  * @param {String} not String "not" to indicate that the element should not be enabled.
  */
-module.exports = async function(selector, not) {
+module.exports = async function (selector, not) {
   /* istanbul ignore next */ // Required otherwise code coverage evaluation fails within $eval calls
   const isElementDisabled = await this.page.$eval(selector, el => el.disabled)
   const shouldElementBeDisabled = not ? true : false

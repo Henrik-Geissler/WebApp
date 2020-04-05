@@ -6,7 +6,7 @@ const assert = require('assert').strict
  * @param {String} selector The selector of the element to set the alue of.
  * @param {String} value The value to set on the element.
  */
-module.exports = async function(selector, value) {
+module.exports = async function (selector, value) {
   const valueToSet = value ? value : '' // Required otherwise code coverage evaluation fails within $eval calls
 
   /* istanbul ignore next */ const setValue = (el, valueToSet) => {

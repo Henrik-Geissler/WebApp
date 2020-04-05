@@ -19,38 +19,38 @@ const checkUrlContains = require('../support/check/checkUrlContains')
 
 const host = 'http://localhost:3000/'
 
-Given('the url {string-env} is opened', async function(url) {
+Given('the url {string-env} is opened', async function (url) {
   await openUrl.call(this, url)
 })
 
-Given('the page {string-env} is opened', async function(page) {
+Given('the page {string-env} is opened', async function (page) {
   const url = ''.concat(host, page)
   await openUrl.call(this, url)
 })
 
-Given('the url {string-env} with user agent {string} is opened', async function(
-  url,
-  userAgent,
-) {
-  await openUrl.call(this, url, userAgent)
-})
+Given(
+  'the url {string-env} with user agent {string} is opened',
+  async function (url, userAgent) {
+    await openUrl.call(this, url, userAgent)
+  },
+)
 
 Given(
   'the page {string-env} with user agent {string} is opened',
-  async function(page, userAgent) {
+  async function (page, userAgent) {
     const url = ''.concat(host, page)
     await openUrl.call(this, url, userAgent)
   },
 )
 
-Given('the url {string-env} with device {string} is opened', async function(
+Given('the url {string-env} with device {string} is opened', async function (
   url,
   device,
 ) {
   await openUrl.call(this, url, null, device)
 })
 
-Given('the page {string-env} with device {string} is opened', async function(
+Given('the page {string-env} with device {string} is opened', async function (
   page,
   device,
 ) {
@@ -58,7 +58,7 @@ Given('the page {string-env} with device {string} is opened', async function(
   await openUrl.call(this, url, null, device)
 })
 
-Given(/^the element "([^"]*)" is( not)? visible$/, async function(
+Given(/^the element "([^"]*)" is( not)? visible$/, async function (
   selector,
   not,
 ) {
@@ -67,7 +67,7 @@ Given(/^the element "([^"]*)" is( not)? visible$/, async function(
 
 Given(
   /^the element "([^"]*)" is( not)? visible after "([^"]*)" seconds$/,
-  async function(selector, not, seconds) {
+  async function (selector, not, seconds) {
     await checkElementVisible.call(this, selector, not, seconds)
   },
 )
@@ -109,7 +109,7 @@ Given(/^the page title (does not )?contains? "([^"]*)?"$/, checkTitleContains)
 
 Given(/^the page url (does not )?contains? "([^"]*)?"$/, checkUrlContains)
 
-Given(/^the screenshot of "([^"]*)?" matches the web page?$/, async function(
+Given(/^the screenshot of "([^"]*)?" matches the web page?$/, async function (
   filename,
 ) {
   await checkScreenshot.call(this, filename)
