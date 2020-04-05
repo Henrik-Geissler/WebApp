@@ -45,7 +45,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "CI Lint Action"
           git add --all
-          git diff-index --quiet HEAD || git commit -m "(CI)Lint: ${{github.event.commits[0].message}}"
+          git diff-index --quiet HEAD || git commit -m "ci(lint):  ${{github.event.commits[0].message}}"
 
       - name: Run Jest UNIT Tests
         run: yarn test-ci:unit
@@ -80,7 +80,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "CI Test Action"
           git add --all
-          git diff-index --quiet HEAD || git commit -m "(CI)Test: ${{github.event.commits[0].message}}"
+          git diff-index --quiet HEAD || git commit -m "ci(testresults): ${{github.event.commits[0].message}}"
 
       - name: Prerelease 
         run: yarn prerelease

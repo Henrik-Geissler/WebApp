@@ -48,7 +48,7 @@
     "test-async:e2e": "echo \"cd \"`pwd`\";yarn test:e2e;exit;\" > \"`pwd`\"/test/E2E_Test.command; chmod +x \"`pwd`\"/test/E2E_Test.command; open \"`pwd`\"/test/E2E_Test.command",
     "test-ci:unit": "react-scripts test --watchAll=false --coverage --forceExit --detectOpenHandles --ci",
     "test-ci:e2e": "PORT=3000 cucumber-js features --exit",
-    "prerelease": "standard-version --pre-release alpha",
+    "prerelease": "standard-version --prerelease alpha",
     "release": "standard-version",
     "eject": "react-scripts eject"
   },
