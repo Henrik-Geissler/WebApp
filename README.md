@@ -1,6 +1,6 @@
 # WebApp
 
-A utility for versioning using [semver](https://semver.org/) and CHANGELOG generation powered by [Conventional Commits](https://conventionalcommits.org).
+A CI/CD Environment for an Example Ionic App including CI Linting, CI UNIT Testing, CI E2E Testing, CD Prereleasing, CD Deploying and Generic Testing Libaries.
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Henrik-Geissler/WebApp/CI)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/Henrik-Geissler/WebApp)
