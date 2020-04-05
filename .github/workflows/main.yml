@@ -43,7 +43,7 @@ jobs:
       - name: Commit Lint Changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "CI Lint Action"
+          git config --local user.name "CI: Linter"
           git add --all
           git diff-index --quiet HEAD || git commit -m "ci(lint):  ${{github.event.commits[0].message}}"
 
@@ -81,18 +81,24 @@ jobs:
       - name: Commit Test Changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "CI Test Action"
+          git config --local user.name "CI: Test"
           git add --all
           git diff-index --quiet HEAD || git commit -m "ci(testresults): ${{github.event.commits[0].message}}"
 
       - name: Prerelease 
-        run: yarn prerelease-ci
+        run: |
+          git config --local user.name "CI: Prerelease"
+          yarn prerelease-ci
           
+      - name: Push master
+        run: |
+          git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:master --follow-tags
+
       - name: Push copy to stable
         run: |
           git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:stable --follow-tags
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
