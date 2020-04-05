@@ -26,7 +26,7 @@ import '@ionic/react/css/display.css'
 import './theme/variables.css'
 
 function App(): JSX.Element {
-  const [selectedPage, setSelectedPage] = useState('');
+  const [selectedPage, setSelectedPage] = useState('')
 
   return (
     <IonApp>
