@@ -9,11 +9,11 @@ Feature: Page Feature
         When  I click the element "ion-menu-button"
         And   I wait for 1.0 seconds
 
-    Scenario: The Website should match the Screenshot
+      Scenario: The Website should match the Screenshot
         Then  I expect the screenshot of "inbox" matches the web page
 
     Scenario Outline: Visit other Pages via the Menu
-        When  I click the element <element>
+          When  I click the element <element>
         Then  I expect the page url contains <page>
 
         Examples:
