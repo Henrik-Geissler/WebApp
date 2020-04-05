@@ -26,6 +26,12 @@
       "options": {
         "parser": "yaml"
       }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "parser": "markdown"
+      }
     }
   ]
 }

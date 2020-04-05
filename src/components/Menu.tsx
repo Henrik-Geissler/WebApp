@@ -33,7 +33,6 @@ interface MenuProps extends RouteComponentProps {
 }
 
 interface AppPage {
-  id: string
   url: string
   iosIcon: string
   mdIcon: string
@@ -43,42 +42,36 @@ interface AppPage {
 const appPages: AppPage[] = [
   {
     title: 'Inbox',
-    id: 'page_Inbox',
     url: '/page/Inbox',
     iosIcon: mailOutline,
     mdIcon: mailSharp,
   },
   {
     title: 'Outbox',
-    id: 'page_Outbox',
     url: '/page/Outbox',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp,
   },
   {
     title: 'Favorites',
-    id: 'page_Favorites',
     url: '/page/Favorites',
     iosIcon: heartOutline,
     mdIcon: heartSharp,
   },
   {
     title: 'Archived',
-    id: 'page_Archived',
     url: '/page/Archived',
     iosIcon: archiveOutline,
     mdIcon: archiveSharp,
   },
   {
     title: 'Trash',
-    id: 'page_Trash',
     url: '/page/Trash',
     iosIcon: trashOutline,
     mdIcon: trashSharp,
   },
   {
     title: 'Spam',
-    id: 'page_Spam',
     url: '/page/Spam',
     iosIcon: warningOutline,
     mdIcon: warningSharp,
@@ -99,7 +92,6 @@ function Menu({selectedPage}: MenuProps): JSX.Element {
               <IonMenuToggle key={index} autoHide={false}>
                 <IonItem
                   className={selectedPage === appPage.title ? 'selected' : ''}
-                  id={appPage.id}
                   routerLink={appPage.url}
                   routerDirection="none"
                   lines="none"
