@@ -40,12 +40,12 @@ jobs:
       - name: Run Linter Prettier
         run: ./node_modules/.bin/prettier --write --config ./.prettierrc "**/*.*"  
 
-      - name: Commit changes
+      - name: Commit Lint Changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "CI Lint Action"
           git add --all
-          git diff-index --quiet HEAD || git commit -m "Lint:${{github.event.commits[0].message}}"
+          git diff-index --quiet HEAD || git commit -m "(CI)Lint: ${{github.event.commits[0].message}}"
 
       - name: Run Jest UNIT Tests
         run: yarn test-ci:unit
@@ -69,18 +69,18 @@ jobs:
         run: |
           sed -i '' 's/headless: true/headless: false/g' features/support/scope/BrowserScope.js
 
-      - name: Commit changes
+      - name: Commit Test Changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "CI Test Action"
           git add --all
-          git diff-index --quiet HEAD || git commit -m "CI:${{github.event.commits[0].message}}"
+          git diff-index --quiet HEAD || git commit -m "(CI)Test: ${{github.event.commits[0].message}}"
           
       - name: Push changes to master
-        run: git push "https://${github.actor}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:master
+        run: git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:master
           
-      - name: Push changes to stable
-        run: git push "https://${github.actor}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:stable
+      - name: Push copy to stable
+        run: git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:stable
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
