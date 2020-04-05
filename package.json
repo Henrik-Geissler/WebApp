@@ -1,6 +1,6 @@
 {
   "name": "webapp",
-  "version": "0.0.3",
+  "version": "0.0.3-alpha.0",
   "private": true,
   "author": {
     "name": "Henrik Geissler"
@@ -48,7 +48,8 @@
     "test-async:e2e": "echo \"cd \"`pwd`\";yarn test:e2e;exit;\" > \"`pwd`\"/test/E2E_Test.command; chmod +x \"`pwd`\"/test/E2E_Test.command; open \"`pwd`\"/test/E2E_Test.command",
     "test-ci:unit": "react-scripts test --watchAll=false --coverage --forceExit --detectOpenHandles --ci",
     "test-ci:e2e": "PORT=3000 cucumber-js features --exit",
-    "release": "standard-version --pre-realease alpha",
+    "prerelease": "standard-version --pre-realease alpha",
+    "release": "standard-version",
     "eject": "react-scripts eject"
   },
   "browserslist": {

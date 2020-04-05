@@ -82,8 +82,8 @@ jobs:
           git add --all
           git diff-index --quiet HEAD || git commit -m "(CI)Test: ${{github.event.commits[0].message}}"
 
-      - name: Release 
-        run: yarn release
+      - name: Prerelease 
+        run: yarn prerelease
 
       - name: Push changes to master
         run: git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:master
