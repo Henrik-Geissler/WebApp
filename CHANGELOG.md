@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.6-alpha.0 (2020-04-05)
+
+
+### Features
+
+* **lang:** added polish language ([07f2444](https://github.com/Henrik-Geissler/WebApp/commit/07f244495d6f07468ec8dbcb6bf057acf9cec6ac))
+
+
+### Bug Fixes
+
+* **alpha:** introducing alpha ([38e306d](https://github.com/Henrik-Geissler/WebApp/commit/38e306d8ecb0a3fa1f200e4d589f80243134586b))
+
 ### 0.0.5 (2020-04-05)
 
 
