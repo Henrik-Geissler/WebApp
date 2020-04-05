@@ -5,7 +5,7 @@ A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/Henrik-Geissler/WebApp)](https://github.com/Henrik-Geissler/WebApp/releases)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Henrik-Geissler/WebApp/CI)](https://github.com/Henrik-Geissler/WebApp/deployments)
 [![David](https://img.shields.io/david/Henrik-Geissler/WebApp)](https://david-dm.org/Henrik-Geissler/WebApp)
-[![David](https://img.shields.io/david/dev/Henrik-Geissler/WebApp)](https://david-dm.org/Henrik-Geissler/WebApp)
+[![David](https://img.shields.io/david/dev/Henrik-Geissler/WebApp)](https://david-dm.org/Henrik-Geissler/WebApp?type=dev)
 [![Codecov](https://img.shields.io/codecov/c/github/Henrik-Geissler/WebApp)](https://codecov.io/gh/Henrik-Geissler/WebApp)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/Henrik-Geissler/WebApp)](https://github.com/Henrik-Geissler/WebApp/releases)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Henrik-Geissler/WebApp)]()
