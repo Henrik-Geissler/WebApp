@@ -1,6 +1,6 @@
 # WebApp
 
-A CI/CD Environment for an Example Ionic App including CI Linting, CI UNIT Testing, CI E2E Testing, CD Prereleasing, CD Deploying and Generic Testing Libaries.
+A CI/CD Setup of the Ionic Example App including CI Linting, CI UNIT Testing, CI E2E Testing, CD Prereleasing, CD Deploying and a Generic Testing Libaries. Ready to Fork from and start your CI/CD Ionic Project. 
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Henrik-Geissler/WebApp/CI)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/Henrik-Geissler/WebApp)
