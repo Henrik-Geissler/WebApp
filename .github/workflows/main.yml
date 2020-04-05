@@ -88,7 +88,7 @@ jobs:
       - name: Commit Changelog
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "CI Releae Action"
+          git config --local user.name "CI Release Action"
           git add --all
           git diff-index --quiet HEAD || git commit -m "(CI)Release: ${{github.event.commits[0].message}}"
 
