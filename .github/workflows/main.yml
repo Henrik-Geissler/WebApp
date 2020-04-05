@@ -68,7 +68,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git show-ref
           git add --all
-          git commit --allow-empty -m "CI:{{github.event.commits[0].message}}"
+          git diff-index --quiet HEAD || git commit --allow-empty -m "CI:{github.event.commits[0].message}"
           
       - name: Push changes to master
         #if: env.DAY_OF_WEEK == 'Mon'
