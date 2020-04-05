@@ -69,6 +69,7 @@
     "cucumber": "5.0.2",
     "expect": "24.5.0",
     "gh-pages": "^2.2.0",
+    "ionic": "^5.4.16",
     "pixelmatch": "^5.0.0",
     "prettier": "^1.19.1",
     "puppeteer": "1.9.0",
