@@ -84,5 +84,5 @@
       "src/**/{!(index),}.tsx"
     ]
   },
-  "description": "An Ionic project"
+  "description": "A CI/CD Setup of the Ionic Starter Template with CI Linting, CI UNIT Testing, CI E2E Testing, CD Prereleasing, CD Deploying and generic testing libaries."
 }
