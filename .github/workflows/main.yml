@@ -90,8 +90,6 @@ jobs:
           
       - name: Push copy to stable
         run: |
-          git git pull origin stable
-          git show-refs
           git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:stable --follow-tags
 
       - name: Deploy to GitHub Pages
