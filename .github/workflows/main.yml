@@ -84,9 +84,6 @@ jobs:
 
       - name: Prerelease 
         run: yarn prerelease-ci
-
-      - name: Push changes to master
-        run: git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:master
           
       - name: Push copy to stable
         run: git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" HEAD:stable
