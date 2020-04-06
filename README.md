@@ -31,7 +31,7 @@ yarn install
 
 ## Usage
 
-#### 1. `yarn lint`
+##### 1. `yarn lint`
 
 runs linter: [ESLint](https://eslint.org/), [GherkinLint](https://github.com/vsiakka/gherkin-lint/) and [Prettier](https://pptr.dev/)
 with well chosen rulesets
