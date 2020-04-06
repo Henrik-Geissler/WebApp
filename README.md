@@ -39,19 +39,19 @@ with well chosen rulesets
 
 #### 2. `yarn test`
 
-runs tests: UNIT Tests with [Jest](https://jestjs.io/) and E2E Tests with [Cucumber](https://cucumber.io/) & [Puppeteer](https://pptr.dev/)
+runs tests: UNIT Tests with [Jest](https://jestjs.io/) and E2E Tests with [Cucumber](https://cucumber.io/) & [Puppeteer](https://pptr.dev/). Comes with a [Pattern Library](https://github.com/Henrik-Geissler/WebApp/tree/master/pattern/feature) to copy-paste from
 
 
 #### 3. `yarn prerelease`
 
-fills Changelog and Releases
+Creates a [CHANGELOG.md](https://github.com/Henrik-Geissler/WebApp/blob/master/CHANGELOG.md) a la [Standard Version](https://www.conventionalcommits.org/) and a `stable` branch
 
 
 #### 4. `yarn deploy`
 
-Deploys the App to gh Pages
+Deploys the App to GitHub Pages. See the [App in Action](https://henrik-geissler.github.io/WebApp)!
 
 
 #### 5. `git push origin master`
 
-runs all the above in github actions for your Pushes
+alls the above automated and remote in [Github Actions](https://github.com/Henrik-Geissler/WebApp/actions) for every `git push`.
