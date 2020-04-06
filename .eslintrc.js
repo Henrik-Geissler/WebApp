@@ -28,6 +28,7 @@ module.exports = {
     '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/no-var-requires': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/camelcase': 'error',
     'no-invalid-this': 'warn',
     'no-magic-numbers': 'warn',
     'prefer-named-capture-group': 'warn',
