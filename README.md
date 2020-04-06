@@ -18,11 +18,9 @@ A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/prettier)](https://prettier.io/)
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/standard-version)](https://www.conventionalcommits.org/)
 
-##Usage
+## Usage
 
-```bash
-yarn lint
-```
+### `yarn lint`
 
 run Linter ESLint,GherkinLint,Prettier
 
