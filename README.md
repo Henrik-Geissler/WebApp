@@ -20,30 +20,26 @@ A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3
 
 ## Usage
 
-#### `yarn lint`
+#### 1. `yarn lint`
 
 run Linter ESLint,GherkinLint,Prettier
 
-```bash
-yarn test
-```
+
+#### 2. `yarn test`
 
 run Jest UNIT Tests and E2E Tests with cucumber & puppeteer
 
-```bash
-yarn prerelease
-```
+
+#### 3. `yarn prerelease`
 
 fills Changelog and Releases
 
-```bash
-yarn deploy
-```
+
+#### 4. `yarn deploy`
 
 Deploys the App to gh Pages
 
-```bash
-git push origin master
-```
+
+#### 5. `git push origin master`
 
 runs all the above in github actions for your Pushes
