@@ -32,26 +32,22 @@ yarn install
 ## Usage
 
 ##### 1. `yarn lint`
-
 runs linter: [ESLint](https://eslint.org/), [GherkinLint](https://github.com/vsiakka/gherkin-lint/) and [Prettier](https://pptr.dev/)
 with well chosen rulesets
 
 
-#### 2. `yarn test`
+##### 2. `yarn test`
+runs tests: UNIT Tests with [Jest](https://jestjs.io/) and E2E Tests with [Cucumber](https://cucumber.io/)
+[![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/cucumber)](https://cucumber.io/) & [Puppeteer](https://pptr.dev/). Comes with a [Pattern Library](https://github.com/Henrik-Geissler/WebApp/tree/master/pattern/feature) to copy-paste from
 
-runs tests: UNIT Tests with [Jest](https://jestjs.io/) and E2E Tests with [Cucumber](https://cucumber.io/) & [Puppeteer](https://pptr.dev/). Comes with a [Pattern Library](https://github.com/Henrik-Geissler/WebApp/tree/master/pattern/feature) to copy-paste from
 
-
-#### 3. `yarn prerelease`
-
+##### 3. `yarn prerelease`
 Creates a [CHANGELOG.md](https://github.com/Henrik-Geissler/WebApp/blob/master/CHANGELOG.md) a la [Standard Version](https://www.conventionalcommits.org/) and a `stable` branch
 
 
-#### 4. `yarn deploy`
-
+##### 4. `yarn deploy`
 Deploys the App to GitHub Pages. See the [App in Action](https://henrik-geissler.github.io/WebApp)!
 
 
-#### 5. `git push origin master`
-
-alls the above automated and remote in [Github Actions](https://github.com/Henrik-Geissler/WebApp/actions) for every `git push`.
+##### 5. `git push origin master`
+All the above automated and remote in [Github Actions](https://github.com/Henrik-Geissler/WebApp/actions) for every `git push`.
