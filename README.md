@@ -18,16 +18,26 @@ A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/prettier)](https://prettier.io/)
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/standard-version)](https://www.conventionalcommits.org/)
 
+You can use this Repository as a starting point for your BDD Cross Platform Mobile App.
+
+## Installation
+
+#### `git clone https://github.com/Henrik-Geissler/WebApp.git`
+#### `cd WebApp`
+#### `yarn install`
+
+
 ## Usage
 
 #### 1. `yarn lint`
 
-run Linter ESLint,GherkinLint,Prettier
+runs linter: [ESLint](https://eslint.org/), [GherkinLint](https://github.com/vsiakka/gherkin-lint/) and [Prettier](https://pptr.dev/)
+with well chosen rulesets
 
 
 #### 2. `yarn test`
 
-run Jest UNIT Tests and E2E Tests with cucumber & puppeteer
+runs tests: UNIT Tests with [Jest](https://jestjs.io/) and E2E Tests with [Cucumber](https://cucumber.io/) & [Puppeteer](https://pptr.dev/)
 
 
 #### 3. `yarn prerelease`
