@@ -18,13 +18,15 @@ A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/prettier)](https://prettier.io/)
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/standard-version)](https://www.conventionalcommits.org/)
 
-You can use this Repository as a starting point for your BDD Cross Platform Mobile App.
+You can use this Repository as a starting point for your Cross Platform Mobile App Behaviour Driven Development
 
 ## Installation
 
-#### `git clone https://github.com/Henrik-Geissler/WebApp.git`
-#### `cd WebApp`
-#### `yarn install`
+```bash 
+git clone https://github.com/Henrik-Geissler/WebApp.git
+cd WebApp
+yarn install
+```
 
 
 ## Usage
