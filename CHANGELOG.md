@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10-alpha.0](https://github.com/Henrik-Geissler/WebApp/compare/v0.0.9-alpha.2...v0.0.10-alpha.0) (2020-04-06)
+
 ### [0.0.9](https://github.com/Henrik-Geissler/WebApp/compare/v0.0.9-alpha.2...v0.0.9) (2020-04-05)
 
 ### [0.0.9-alpha.2](https://github.com/Henrik-Geissler/WebApp/compare/v0.0.9-alpha.1...v0.0.9-alpha.2) (2020-04-05)
