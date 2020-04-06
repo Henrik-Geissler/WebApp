@@ -20,7 +20,7 @@ A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3
 
 ## Usage
 
-### `yarn lint`
+#### `yarn lint`
 
 run Linter ESLint,GherkinLint,Prettier
 
