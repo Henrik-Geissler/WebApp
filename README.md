@@ -1,6 +1,6 @@
 # WebApp
 
-A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3/cli/starters.html) with Linting, UNIT & E2E Test and Continuous Delivery. See the [App in Action](https://henrik-geissler.github.io/WebApp)!
+A CI/CD setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3/cli/starters.html) with Linting, UNIT & E2E Testing and Continuous Delivery. See the [App in Action](https://henrik-geissler.github.io/WebApp)!
 
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/Henrik-Geissler/WebApp)](https://github.com/Henrik-Geissler/WebApp/releases)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Henrik-Geissler/WebApp/CI)](https://github.com/Henrik-Geissler/WebApp/deployments)
@@ -18,7 +18,7 @@ A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/prettier)](https://prettier.io/)
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/standard-version)](https://www.conventionalcommits.org/)
 
-You can use this Repository as a starting point for your Cross Platform Mobile App Behaviour Driven Development. Every Change in your codebase will be auto linted, tested, released and deployed.
+You can use this repository as a starting point for your Cross Platform Mobile App Behaviour Driven Development. Every change in your codebase will be auto linted, tested, released and deployed.
 
 ## Installation
 
@@ -33,16 +33,15 @@ yarn install
 
 ##### 1. `yarn lint`
 Runs linter: [ESLint](https://eslint.org/), [GherkinLint](https://github.com/vsiakka/gherkin-lint/) and [Prettier](https://www.prettier.io/)
-with well chosen rulesets
+with well chosen rulesets.
 
 
 ##### 2. `yarn test`
-Runs tests: UNIT Tests with [Jest](https://jestjs.io/) and E2E Tests with [Cucumber](https://cucumber.io/)
-[![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/cucumber)](https://cucumber.io/) & [Puppeteer](https://pptr.dev/). Comes with a [Pattern Library](https://github.com/Henrik-Geissler/WebApp/tree/master/pattern/feature) to copy-paste from
+Runs tests: UNIT Tests with [Jest](https://jestjs.io/) and E2E Tests with [Cucumber](https://cucumber.io/) & [Puppeteer](https://pptr.dev/). Comes with a [Pattern Library](https://github.com/Henrik-Geissler/WebApp/tree/master/pattern/feature) to copy-paste from.
 
 
 ##### 3. `yarn prerelease`
-Creates a [CHANGELOG.md](https://github.com/Henrik-Geissler/WebApp/blob/master/CHANGELOG.md) with [Standard Version](https://www.conventionalcommits.org/) and a `stable` branch
+Creates a [CHANGELOG.md](https://github.com/Henrik-Geissler/WebApp/blob/master/CHANGELOG.md) with [Standard Version](https://www.conventionalcommits.org/) and a `stable` branch.
 
 
 ##### 4. `yarn deploy`
