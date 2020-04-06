@@ -17,3 +17,35 @@ A CI/CD Setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/pixelmatch)](https://github.com/mapbox/pixelmatch)
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/prettier)](https://prettier.io/)
 [![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/WebApp/dev/standard-version)](https://www.conventionalcommits.org/)
+
+##Usage
+
+```bash
+yarn lint
+```
+
+run Linter ESLint,GherkinLint,Prettier
+
+```bash
+yarn test
+```
+
+run Jest UNIT Tests and E2E Tests with cucumber & puppeteer
+
+```bash
+yarn prerelease
+```
+
+fills Changelog and Releases
+
+```bash
+yarn deploy
+```
+
+Deploys the App to gh Pages
+
+```bash
+git push origin master
+```
+
+runs all the above in github actions for your Pushes

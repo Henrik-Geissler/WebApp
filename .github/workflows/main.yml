@@ -35,13 +35,13 @@ jobs:
         run: yarn install 
 
       - name: Run Linter ESLint
-        run: ./node_modules/.bin/eslint --fix "**/*.*"
+        run: yarn lint:eslint
 
       - name: Run Linter Prettier
-        run: ./node_modules/.bin/prettier --write --config ./.prettierrc "**/*.*"  
+        run: yarn lint:prettier 
 
       - name: Run Linter Gherkin
-        run: ./node_modules/.bin/gherkin-lint -c ./.gherkin-lintrc "**/*.feature"  
+        run: yarn lint:gherkin-lint
 
       - name: Commit Lint Changes
         run: |
