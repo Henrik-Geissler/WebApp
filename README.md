@@ -31,7 +31,7 @@ yarn install
 
 ## Usage
 
-### local
+### - local
 
 ##### 1. `yarn lint`
 Runs linter: [ESLint](https://eslint.org/), [GherkinLint](https://github.com/vsiakka/gherkin-lint/) and [Prettier](https://www.prettier.io/)
@@ -52,7 +52,7 @@ Creates a [CHANGELOG.md](https://github.com/Henrik-Geissler/WebApp/blob/master/C
 ##### 5. `yarn deploy`
 Deploys the App to GitHub Pages. See the [App in Action](https://henrik-geissler.github.io/WebApp)!
 
-### remote
+### * remote
 
 ##### 1: `git push origin master`
 Workflows run all the above automated on the remote end with [Github Actions](https://github.com/Henrik-Geissler/WebApp/actions) after every `git push`.
