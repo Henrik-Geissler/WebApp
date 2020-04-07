@@ -3,6 +3,7 @@ import {render} from '@testing-library/react'
 import Page from './Page'
 import {createLocation, createMemoryHistory} from 'history'
 import {match as routerMatch} from 'react-router'
+import {BrowserRouter} from 'react-router-dom'
 
 type MatchParameter<Params> = {[K in keyof Params]?: string}
 
@@ -25,11 +26,11 @@ const generateUrl = <Params extends MatchParameter<Params>>(
 
   return tempPath
 }
-export const routerTestProps = <Params extends MatchParameter<Params> = {}>(
+function routerTestProps<Params extends MatchParameter<Params> = {}>(
   path: string,
   params: Params,
   extendMatch: Partial<routerMatch<any>> = {},
-) => {
+) {
   const match: routerMatch<Params> = Object.assign(
     {},
     {
@@ -47,6 +48,10 @@ export const routerTestProps = <Params extends MatchParameter<Params> = {}>(
 }
 test('renders without crashing', () => {
   const props = routerTestProps('/route/:id', {name: 'Test'})
-  const {baseElement} = render(<Page {...props} />)
+  const {baseElement} = render(
+    <BrowserRouter>
+      <Page {...props} />
+    </BrowserRouter>,
+  )
   expect(baseElement).toBeDefined()
 })
