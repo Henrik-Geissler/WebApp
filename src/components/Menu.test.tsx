@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {render} from '@testing-library/react'
 import Menu from './Menu'
 
 test('renders without crashing', () => {
-  const [selectedPage, setSelectedPage] = useState('')
-  const {baseElement} = render(<Menu selectedPage={selectedPage} />)
+  const str = 'Test'
+  const {baseElement} = render(<Menu selectedPage={str} />)
   expect(baseElement).toBeDefined()
 })
