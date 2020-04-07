@@ -54,5 +54,5 @@ Deploys the App to GitHub Pages. See the [App in Action](https://henrik-geissler
 
 ### remote
 
-##### CI/CD: `git push origin master`
+##### 1: `git push origin master`
 Workflows run all the above automated on the remote end with [Github Actions](https://github.com/Henrik-Geissler/WebApp/actions) after every `git push`.
