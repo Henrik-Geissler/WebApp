@@ -37,7 +37,7 @@ with well chosen rulesets.
 
 
 ##### 2. `yarn test`
-Runs tests: UNIT Tests with [Jest](https://jestjs.io/) and E2E Tests with [Cucumber](https://cucumber.io/) & [Puppeteer](https://pptr.dev/). Comes with a [Pattern Library](https://github.com/Henrik-Geissler/WebApp/tree/master/pattern/feature) to copy-paste from.
+Runs tests: UNIT Tests with [Jest](https://jestjs.io/) and E2E Tests with [Cucumber](https://cucumber.io/) & [Puppeteer](https://pptr.dev/). Comes with [Coverage Reports](https://codecov.io/gh/Henrik-Geissler/WebApp) and a [Pattern Library](https://github.com/Henrik-Geissler/WebApp/tree/master/pattern/feature) to copy-paste from.
 
 
 ##### 3. `yarn prerelease`
